@@ -13,9 +13,9 @@ class Nav extends Component {
   render() {
     return (
       <nav id="nav-bar">
-        <img class="logo" src="images/tryitlogo.png">
+        <img className="logo" src="images/tryitlogo.png"/>
         <div id="nav-text">
-          <span class="header">Try-it!</span>
+          <span className="header">Vyo͞o</span>
         </div>
       </nav>
     );

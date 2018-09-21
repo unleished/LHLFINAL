@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import FavouriteContainer from "./favouritecontainer";
+import ProductContainer from "./productcontainer";
+import Nav from "./nav";
 
 class App extends Component {
   state = { products: [] };
@@ -12,11 +16,11 @@ class App extends Component {
 
   render() {
     return (
-      <main className="container">
-      <Nav />;
-      <ProductContainer />;
-      <FavouriteContainer />;
-       </main>
+      <div className="container">
+      <Nav />
+      <ProductContainer />
+      <FavouriteContainer />
+       </div>
     );
   }
 }

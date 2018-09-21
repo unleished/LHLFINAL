@@ -14,30 +14,8 @@ class ProductContainer extends Component {
     return (
     <section id="product-container">
       <img src="images/vegetal-chair.jpg"/>
-        <div id="thumbnail">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="thumbnail">
-                <a href="/w3images/lights.jpg" target="_blank">
-                  <img src="images/vegetal-chair-black.jpg"/>
-                </a>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="thumbnail">
-                <a href="/w3images/nature.jpg" target="_blank">
-                  <img src="images/vegetal-chair-chocolate.jpg"/>
-                </a>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="thumbnail">
-                <a href="/w3images/fjords.jpg" target="_blank">
-                  <img src="images/vegetal-chair-mauve-grey.jpg"/>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div>
+          <img class="img-thumbnail"src="images/vegetal-chair-black.jpg"/>
         </div>
      </section>
      );

@@ -1,28 +1,68 @@
-.App {
-  text-align: center;
+
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  margin: 0;
+  color: #244751;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#nav-bar{
+width: 100%;
+top: 0;
+position: fixed;
+height: 100px;
+background-color: white;
+padding: 0 2em 0;
+z-index: 10;
 }
 
-.App-title {
-  font-size: 1.5em;
+#nav-text{
+  float:right;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #FBD2D7;
 }
 
-.App-intro {
-  font-size: large;
+#nav-bar .logo{
+  width: 100px;
+  height: 100px;
+  float:left;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.container{
+  margin: 200px 0px 0px 0px;
+  width: 100%;
+}
+
+#product-container{
+width: 50%;
+float: left;
+padding: 50px;
+}
+
+#thumbnail img{
+  width: 100px;
+  background-color: red;
+}
+
+#product-description{
+  padding: 50px;
+  float:right;
+  width: 50%;
+  right: 0;
+}
+#text-description{
+  font-size: 24px;
+  margin-top: 20%;
+}
+.qrcode{
+  width: 50px;
 }
