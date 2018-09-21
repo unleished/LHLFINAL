@@ -4,6 +4,7 @@ import "./App.css";
 import FavouriteContainer from "./favouritecontainer";
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
+import Categories from "./Categories.jsx";
 
 class App extends Component {
   state = { products: [] };
@@ -17,10 +18,15 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-      <Nav />
-      <ProductContainer />
-      <FavouriteContainer />
-       </div>
+        <div>
+          <Nav />
+          <ProductContainer />
+          <FavouriteContainer />
+        </div>
+      </div>
+        <div>
+          <Categories/>
+        </div>
     );
   }
 }
