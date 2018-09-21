@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-class App extends Component {
+class Nav extends Component {
   state = { products: [] };
 
   componentDidMount() {
@@ -12,13 +12,14 @@ class App extends Component {
 
   render() {
     return (
-      <main className="container">
-      <Nav />;
-      <ProductContainer />;
-      <FavouriteContainer />;
-       </main>
+      <nav id="nav-bar">
+        <img class="logo" src="images/tryitlogo.png">
+        <div id="nav-text">
+          <span class="header">Try-it!</span>
+        </div>
+      </nav>
     );
   }
 }
 
-export default App;
+export default Nav;
