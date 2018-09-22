@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
 import FavouriteContainer from "./favouritecontainer";
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
+import Home from "./home";
 
 class App extends Component {
   state = { products: [] };
@@ -16,11 +22,13 @@ class App extends Component {
 
   render() {
     return (
+      <HashRouter>
       <div className="container">
       <Nav />
-      <ProductContainer />
-      <FavouriteContainer />
+      <Home />
+      <Route path="/products" component={ProductContainer}/>
        </div>
+       </HashRouter>
     );
   }
 }
