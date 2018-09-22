@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
         description: "Taking inspiration from plants and nature, the Vegetal chair features branch-like structures that form a slightly irregular seating shell, supported by four legs. The chair, designed for use indoors and outdoors, is made from die-cast, fibre-reinforced polyamide and comes in six different colours. Vegetal should not only be seen in the context of the design and furnishing of historic gardens. It also corresponds to current trends towards the flexible use of weatherproof furniture in interiors, in the garden or on the terrace, and will make the perfect addition to any lifestyle.",
         price: '200'
       },
-        { name: 'The Fishet Chair',
+        { name: 'The Fishnet Chair',
         category: 'chairs',
         description: "The Fishnet Chair is archetypical avant-garde. Back then it was ahead of its time. Today, its timeless character is so evident. The Fishnet Chair is classic design history. With artistic impetus, Sadi Ozis wove fishnet between the bent tubular steel framework back in 1959 – due to the lack of materials in Turkey after the Second World War. And in this reissue, featuring an upholstered seat and back - further developed later by Sadi Ozis together with his son, Neptun Ozis - the side chair has lost nothing of its iconic charm. A sculpture in design, authentic and of great innovative power.",
         price: '350'
