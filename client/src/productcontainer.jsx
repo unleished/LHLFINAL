@@ -5,13 +5,13 @@ function ProductContainer (props) {
 
 
 
-
+  const thumbs = "thumbs";
     return (
       <div>
     <section id="product-container">
       <img src="images/vegetal-chair.jpg"/>
         <div>
-          // {thumbs && <img source={thumbs} />}
+          {thumbs && <img source={thumbs} />}
         </div>
      </section>
      <section id="product-description">
