@@ -12,27 +12,31 @@ import Nav from "./nav";
 import Home from "./home";
 
 class App extends Component {
-  state = { products: [] };
+  state = { images: [] };
 
   getProducts(){
 
-    fetch("http://localhost:3001/api/v1/products")
-      .then(res => res.json())
-      .then(products => this.setState({ products }));
+    fetch("http://localhost:3001/api/v1/images")
+
+      .then(res =>  res.json())
+      .then(images => { this.setState({ images })});
   }
 
 
   componentDidMount() {
+
     this.getProducts();
 
   }
 
   render() {
+
     return (
+
       <HashRouter>
       <div className="container">
       <Nav />
-      <Home products={this.state.products}/>
+      <Home images={this.state.images}/>
       <Route path="/products" component={ProductContainer}/>
        </div>
        </HashRouter>

@@ -5,11 +5,11 @@ var router = express.Router();
 const knexConfig = require("../../../knexfile.js");
 const knex = require("knex")(knexConfig["development"]);
 
-
+/* GET users listing. */
 router.get("/", function(req, res, next) {
   knex
     .select("*")
-    .from("products")
+    .from("images")
     .then(rows => {
       res.json(rows);
     })

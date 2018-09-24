@@ -9,15 +9,15 @@ import {
 
 function GridProduct (props) {
 
-
-
+const imageURL = props.image
+console.log("grid product" + imageURL);
 
     return (
-      <div class="container">
-      <div class="row text-center text-lg-left">
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt=""/>
+      <div className="container">
+      <div className="row text-center text-lg-left">
+        <div className="col-lg-3 col-md-4 col-xs-6">
+          <a href="#" className="d-block mb-4 h-100">
+            <img className="img-fluid img-thumbnail" src={"" + imageURL} alt=""/>
           </a>
         </div>
       </div>

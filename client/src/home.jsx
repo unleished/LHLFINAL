@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
+
 import GridProduct from "./gridproduct";
 
 function Home (props) {
 
-console.log(props.products)
-const products = props.products;
-// const list = products.map((product)=>
-//   <GridProduct product={product.name} /> );
+
+const images = props.images;
+const list = images.map((image)=>
+
+  <GridProduct image={image.path_1} /> );
 
     return (
-      <ul>{products}</ul>
+      <ul>{list}</ul>
 
 
     );
@@ -23,13 +20,3 @@ const products = props.products;
 
 
 export default Home
-
- // <div class="container">
- //      <div class="row text-center text-lg-left">
- //        <div class="col-lg-3 col-md-4 col-xs-6">
- //          <a href="#" class="d-block mb-4 h-100">
- //            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
- //          </a>
- //        </div>
- //      </div>
- //    </div>
