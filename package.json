@@ -1,0 +1,26 @@
+{
+  "name": "vyoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "cd client && npm start && cd ../server && npm start",
+    "postinstall": "npm install --prefix server && npm install --prefix client && cd client && npm run-script build",
+    "start:heroku": "cd server && npm start"
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lleki/LHLFINAL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lleki/LHLFINAL/issues"
+  },
+  "homepage": "https://github.com/lleki/LHLFINAL#readme"
+}
