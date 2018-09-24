@@ -6,8 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "cd client && yarn start && cd ../server && yarn start",
-    "heroku-postbuild": "cd client && yarn install && cd ../server && yarn install"
+    "start": "cd client && yarn start && cd ../server && yarn start"
   },
   "engines": {
     "node": "8.9.4"
