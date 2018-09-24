@@ -1,4 +1,4 @@
- import React, { Component } from "react";
+import React, { Component } from "react";
 import "./App.css";
 
 function ProductContainer (props) {
@@ -11,7 +11,7 @@ function ProductContainer (props) {
     <section id="product-container">
       <img src="images/vegetal-chair.jpg"/>
         <div>
-          <img class="img-thumbnail"src="images/vegetal-chair-black.jpg"/>
+          {thumbs && <img source={thumbs} />}
         </div>
      </section>
      <section id="product-description">
