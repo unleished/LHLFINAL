@@ -9,18 +9,13 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
-
-  <!-- Camera sensor -->
-        <canvas id="camera--sensor"></canvas>
-        <!-- Camera view -->
-        <video id="camera--view" autoplay playsinline>
-   <a-scene>
+   <a-scene embedded artoolkit='sourceType: webcam;'>
+       <a-camera preset='hiro'></a-camera>
 
 
    <a-entity io3d-furniture="id:9a17f541-886e-467e-b740-cf665d74af11" position="0 0 0"></a-entity>
 
       <a-marker-camera preset='hiro'></a-marker-camera>
    </a-scene>
- </video>
 </body>
 </html>
