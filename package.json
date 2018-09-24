@@ -6,11 +6,13 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "cd server && yarn start",
+    "start": "cd client && yarn start && cd ../server && yarn start",
     "heroku-postbuild": "cd client && yarn install && cd ../server && yarn install"
-    
-
   },
+  "engines": {
+    "node": "8.9.4"
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lleki/LHLFINAL.git"
