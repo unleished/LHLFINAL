@@ -6,7 +6,8 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "cd client && yarn start && cd ../server && yarn start"
+    "start": "cd client && yarn start && cd ../server && yarn start",
+    "postinstall": "yarn install -- prefix server && yarn install --prefix client"
   },
   "engines": {
     "node": "8.9.4"
