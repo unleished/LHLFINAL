@@ -1,0 +1,56 @@
+Arguments: 
+  /home/vagrant/.nvm/versions/node/v8.9.4/bin/node /home/vagrant/.nvm/versions/node/v8.9.4/bin/yarn start
+
+PATH: 
+  /home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v8.9.4/bin:/home/vagrant/.rvm/gems/ruby-2.3.5/bin:/home/vagrant/.rvm/gems/ruby-2.3.5@global/bin:/home/vagrant/.rvm/rubies/ruby-2.3.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin:/home/vagrant/.rvm/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.9.4
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /vagrant/final/vyoo/package.json: Unexpected token } in JSON at position 219
+      at JSON.parse (<anonymous>)
+      at /home/vagrant/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/home/vagrant/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:92:30)
+      at /home/vagrant/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:103:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "vyoo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+      "start": "cd client && yarn start && cd ../server && yarn start",
+    },
+    "engines": {
+      "node": "8.9.4"
+    },
+  
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lleki/LHLFINAL.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/lleki/LHLFINAL/issues"
+    },
+    "homepage": "https://github.com/lleki/LHLFINAL#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

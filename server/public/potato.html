@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://google-ar.github.io/three.ar.js/dist/three.ar.js"></script>
+    <script src="https://rawgit.com/chenzlabs/aframe-ar/827e9db/dist/aframe-ar.min.js"></script>
+    <body>
+
+      <a-assets>
+        <a-asset id="cesium-man" src="CesiumMan.glb"></a-asset>
+      </a-assets>
+      <a-entity id="walker" gltf-model="#cesium-man" position="0 0 -5" scale="0.5 0.5 0.5">
+      </a-entity>
+      <a-sky color=""></a-sky>
+
+    </body>
+
+  </body>
+</html>
