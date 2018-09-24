@@ -1,10 +1,13 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('products').del()
-    .then(function () {
+  return knex('images').del()
+  .then(function() {
+    return knex('products').del()
+  })  
+  .then(function () {
       // Inserts seed entries
-      return knex('products').insert([
+      return knex('products').returning('id').insert([
         { name: 'The Vegetal Chair', 
         category: 'chairs',
         description: "Taking inspiration from plants and nature, the Vegetal chair features branch-like structures that form a slightly irregular seating shell, supported by four legs. The chair, designed for use indoors and outdoors, is made from die-cast, fibre-reinforced polyamide and comes in six different colours. Vegetal should not only be seen in the context of the design and furnishing of historic gardens. It also corresponds to current trends towards the flexible use of weatherproof furniture in interiors, in the garden or on the terrace, and will make the perfect addition to any lifestyle.",
@@ -45,7 +48,60 @@ exports.seed = function(knex, Promise) {
         description: "This stylish floor lamp is a staple piece in any modern home. The conical shade casts a soft light around the atmosphere whilst sitting on the lacquered zamac base at a 45 degree angle. Useful as either a reading light or a decorative statement, this is a design piece not to be missed.",
         price: '950'
       }
-    ]);
-  });
+    ])
+    .then(function (product_id) {
+      // Inserts seed entries
+      return knex('images').insert([
+        { product_id: product_id[0],
+          path_1: '/images/chairs/1_vegetal/1.jpg',
+          path_2: '/images/chairs/1_vegetal/2.jpg',
+          path_3: '/images/chairs/1_vegetal/3.jpg',
+          path_4: '/images/chairs/1_vegetal/4.jpg'
+        },
+        { product_id: product_id[1],
+          path_1: '/images/chairs/2_fishnet/2.jpg',
+          path_2: '/images/chairs/2_fishnet/3.jpg',
+          path_3: '/images/chairs/2_fishnet/1.jpe',
+          path_4: '/images/chairs/2_fishnet/4.jpg'
+        },
+        { product_id: product_id[2],
+          path_1: '/images/chairs/3_aluminium/1.jpg',
+          path_2: '/images/chairs/3_aluminium/2.jpg',
+          path_3: '/images/chairs/3_aluminium/3.jpg',
+          path_4: '/images/chairs/3_aluminium/4.jpg'
+        },
+        { product_id: product_id[3],
+          path_1: '/images/tables/4_plate/1.jpg',
+          path_2: '/images/tables/4_plate/2.jpg',
+          path_3: '/images/tables/4_plate/3.jpg',
+          path_4: '/images/tables/4_plate/4.jpg'
+        },
+        { product_id: product_id[4],
+          path_1: '/images/tables/5_bondt/1.jpg',
+          path_2: '/images/tables/5_bondt/2.jpg',
+          path_3: '/images/tables/5_bondt/3.jpg',
+          path_4: '/images/tables/5_bondt/4.jpg'
+        },
+        { product_id: product_id[5],
+          path_1: '/images/tables/6_desalto/1.jpg',
+          path_2: '/images/tables/6_desalto/2.jpg',
+          path_3: '/images/tables/6_desalto/3.jpg',
+          path_4: '/images/tables/6_desalto/4.jpg'
+        },
+        { product_id: product_id[6],
+          path_1: '/images/lighting/7_kaiser/1.jpg',
+          path_2: '/images/lighting/7_kaiser/2.jpg',
+          path_3: '/images/lighting/7_kaiser/3.jpg',
+          path_4: '/images/lighting/7_kaiser/4.jpeg'
+        },
+        { product_id: product_id[7],
+          path_1: '/images/lighting/8_melampo/1.jpg',
+          path_2: '/images/lighting/8_melampo/2.jpg',
+          path_3: '/images/lighting/8_melampo/3.jpg',
+          path_4: '/images/lighting/8_melampo/4.jpg'
+        },
+      ]);
+    });   
+  });   
 };
 
