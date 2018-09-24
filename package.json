@@ -1,0 +1,22 @@
+{
+  "name": "vyoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "cd server && yarn start"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lleki/LHLFINAL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lleki/LHLFINAL/issues"
+  },
+  "homepage": "https://github.com/lleki/LHLFINAL#readme"
+}
