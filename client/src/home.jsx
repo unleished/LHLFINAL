@@ -5,14 +5,17 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+import GridProduct from "./gridproduct";
 
 function Home (props) {
 
 console.log(props.products)
-
+const products = props.products;
+// const list = products.map((product)=>
+//   <GridProduct product={product.name} /> );
 
     return (
-      <div>testing home screen</div>
+      <ul>{products}</ul>
 
 
     );
