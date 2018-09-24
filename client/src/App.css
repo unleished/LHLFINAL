@@ -20,14 +20,26 @@ top: 0;
 position: fixed;
 height: 100px;
 background-color: white;
+color: #FBD2D7;
 padding: 0 2em 0;
 z-index: 10;
 }
+#nav-bar ul{
+  display: inline-block;
+}
 
-#nav-text{
-  float:right;
+#nav-bar li{
   font-family: 'Playfair Display', serif;
-  font-size: 3em;
+  font-size: 16px;
+  list-style: none;
+  display: inline-block;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#nav-bar li a:link, a:visited{
+  text-decoration: none;
   color: #FBD2D7;
 }
 
@@ -35,6 +47,9 @@ z-index: 10;
   width: 100px;
   height: 100px;
   float:left;
+}
+.header{
+  font-size: 30px;
 }
 
 .container{
