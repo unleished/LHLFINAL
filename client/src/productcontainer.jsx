@@ -1,16 +1,11 @@
  import React, { Component } from "react";
 import "./App.css";
 
-class ProductContainer extends Component {
-  state = { products: [] };
+function ProductContainer (props) {
 
-  componentDidMount() {
-    fetch("http://localhost:3001/api/v1/products")
-      .then(res => res.json())
-      .then(products => this.setState({ products }));
-  }
 
-  render() {
+
+
     return (
       <div>
     <section id="product-container">
@@ -30,6 +25,6 @@ class ProductContainer extends Component {
      </div>
      );
   }
-}
+
 
 export default ProductContainer;

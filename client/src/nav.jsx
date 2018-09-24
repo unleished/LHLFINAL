@@ -6,16 +6,12 @@ import {
   HashRouter
 } from "react-router-dom";
 
-class Nav extends Component {
-  state = { products: [] };
+function Nav (props) {
 
-  componentDidMount() {
-    fetch("http://localhost:3001/api/v1/products")
-      .then(res => res.json())
-      .then(products => this.setState({ products }));
-  }
 
-  render() {
+
+
+
     return (
       <nav id="nav-bar" className="navbar navbar-expand-lg navbar-light bg-light">
         <img className="logo" src="images/tryitlogo.png"/>
@@ -32,7 +28,7 @@ class Nav extends Component {
       </nav>
 
     );
-  }
+
 }
 
 export default Nav;
