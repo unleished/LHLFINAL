@@ -17,7 +17,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://enigmatic-wildwood-37187.herokuapp.com/"
+      "target": "http://localhost:3001/"
     }
   }
 }
