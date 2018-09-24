@@ -6,8 +6,10 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "cd server && yarn start"
+    "start": "cd server && yarn start",
+    "heroku-postbuild": "cd client && yarn install && cd ../server && yarn install"
     
+
   },
   "repository": {
     "type": "git",
