@@ -1,0 +1,51 @@
+<html lang=”en”>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Name of your awesome camera app -->
+    <title>Camera App</title>
+    <!-- Link to your main style sheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AR scripts-->
+    <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+
+    <!-- <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script> -->
+    <script src="https://3d.io/releases/3dio-js/1.x.x-beta/3dio.min.js"></script>
+    <style>
+      a-scene {
+        height: 600px;
+        width: 600px;
+      }
+      video {
+        z-index: 0;
+      }
+      .a-enter-vr {
+        display: none;
+      }
+    </style>
+</head>
+
+
+<body>
+  <a-assets>
+    <video id="webcam"></video>
+  </a-assets>
+
+        <!-- Camera view -->
+        <video id="camera--view" autoplay playsinline></video>
+        <a-scene  >
+          <a-assets>
+            <a-video src="#camera--view"></a-video>
+          </a-assets>
+
+          <a-entity io3d-furniture="id:d8402f88-3595-4c99-8abe-b81d9ca10d4c"  rotation="0 30 0" position="0 .5 -2"></a-entity>
+
+      </a-scene>
+
+        <button id="camera--trigger">Take a picture</button>
+    <script src="app.js"></script>
+</body>
+</html>
