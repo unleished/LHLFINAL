@@ -8,10 +8,6 @@ import {
 
 function Nav (props) {
 
-
-
-
-
     return (
       <nav id="nav-bar" className="navbar navbar-expand-lg navbar-light bg-light">
         <img className="logo" src="images/tryitlogo.png"/>

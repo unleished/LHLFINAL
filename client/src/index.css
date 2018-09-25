@@ -13,3 +13,35 @@ body {
   background-color: white;
   font-family: 'Roboto', sans-serif;
 }
+
+img#gallery{
+  max-width: 250px;
+  max-height: 250px;
+  position: relative;
+  padding: 10px;
+}
+  div.grid-product-container {
+    
+    max-width: 260px;
+    
+    position:  relative;
+    
+    border:        1px solid #ccc;
+    border-radius: 5px;
+    padding:       15px;
+    padding-bottom: 80px;
+    margin-top:    20px;
+    overflow: hidden;
+    
+   }
+  
+
+
+ul{
+  display:         flex;
+    flex-direction:  row;
+    flex-wrap:       wrap;
+    justify-content: space-around;
+    
+    
+}

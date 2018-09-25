@@ -13,7 +13,7 @@ const imageURL = props.image
 console.log("grid product" + imageURL);
 
     return (
-      <div className="container">
+      <div className="grid-product-container">
       <div className="row text-center text-lg-left">
         <div className="col-lg-3 col-md-4 col-xs-6">
           <a href="#" className="d-block mb-4 h-100">
