@@ -17,7 +17,7 @@ console.log("grid product" + imageURL);
       <div className="row text-center text-lg-left">
         <div className="col-lg-3 col-md-4 col-xs-6">
           <a href="#" className="d-block mb-4 h-100">
-            <img className="img-fluid img-thumbnail" src={"" + imageURL} alt=""/>
+            <img id="gallery" className="img-fluid img-thumbnail" src={"" + imageURL} alt=""/>
           </a>
         </div>
       </div>
