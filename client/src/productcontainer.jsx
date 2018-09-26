@@ -7,43 +7,27 @@ import "./App.js";
 class ProductContainer extends React.Component {
   constructor(props){
     super(props);
-    this.product_id = this.props.match.params.id;
-    this.product_name='';
-    this.product_description='';
-    }
+    this.state = { product: [] }
+  }
     
-  state = { products: [] };
-  getProducts(){
-    fetch("http://localhost:3001/api/v1/products")
+  getProductsbyID(id){
+    fetch(`http://localhost:3001/api/v1/products`)
     
     .then(res => res.json())
-    .then(products => { this.setState({ products })})
+    .then(product => { this.setState({ product })})
   }
   
   componentDidMount() {
-    this.getProducts();
-    
-  }
+    this.getProductsbyID(33)
+  };
   
   render(){
-    for (let x = 0; x < this.state.products.length; x++){
-      if(this.state.products[x].id == this.props.match.params.id){
-        this.product_name = this.state.products[x].name;
-        break;
-      }
-    }
-    for (let x = 0; x < this.state.products.length; x++){
-      if(this.state.products[x].id == this.props.match.params.id){
-        this.product_description = this.state.products[x].description;
-        break;
-      }
-    }
 
 
     return (
       <div>
     <section id="product-container">
-      {/* <img src={product_image1}/>                                                                                                                                                                                                                                                                                                                              */}
+      <img src={this.state.products.path_1}/>                                                                                                                                                                                                                                                                                                                             
         <div>
 
         </div>
