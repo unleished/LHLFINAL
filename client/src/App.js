@@ -13,6 +13,8 @@ import {
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
+import AR from "./AR";
+
 
 class App extends Component {
 
@@ -29,6 +31,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
           <Route path="/products" component ={() => <ProductContainer />}/>
+          <Route path="/test" component={() => <AR />}/>
         </Switch>
         </div>
       </BrowserRouter>
