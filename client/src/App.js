@@ -10,6 +10,7 @@ import {
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
+import AR from "./AR";
 
 class App extends Component {
   state = { products: [] };
@@ -18,7 +19,7 @@ class App extends Component {
 
     fetch("http://localhost:3001/api/v1/products")
       .then(res => res.json())
-      .then(products => this.setState({ products }));
+      // .then(products => this.setState({ products }));
   }
 
 
@@ -34,6 +35,7 @@ class App extends Component {
       <Nav />
       <Home products={this.state.products}/>
       <Route path="/products" component={ProductContainer}/>
+      <Route path="/test" component={AR}/>
        </div>
        </HashRouter>
     );
