@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 120;
   color: #244751;
   background-color: white;
   font-family: 'Roboto', sans-serif;
@@ -20,22 +20,6 @@ img#gallery{
   position: relative;
   padding: 10px;
 }
-  div.grid-product-container {
-    
-    max-width: 260px;
-    
-    position:  relative;
-    
-    border:        1px solid #ccc;
-    border-radius: 5px;
-    padding:       15px;
-    padding-bottom: 80px;
-    margin-top:    20px;
-    overflow: hidden;
-    
-   }
-  
-
 
 ul{
   display:         flex;

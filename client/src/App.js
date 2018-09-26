@@ -38,8 +38,8 @@ class App extends Component {
       <HashRouter>
       <div className="container">
       <Nav />
-      <Home images={this.state.images}/>
-      <Route path="/products" component={ProductContainer}/>
+      <Route exact path="/" render={() => <Home images={this.state.images}/>}/>
+      <Route exact path="/products/:id" component={ProductContainer}/>
        </div>
        </HashRouter>
     );

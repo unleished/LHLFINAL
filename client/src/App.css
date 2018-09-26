@@ -1,4 +1,6 @@
-
+body {
+  margin: 120px;
+}
 .header{
   font-size: 30px;
 }
@@ -6,12 +8,30 @@
 .container{
   margin: 200px 0px 0px 0px;
   width: 100%;
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-around;
 }
 
 #product-container{
-width: 50%;
-float: left;
-padding: 50px;
+  width: 50%;
+  float: left;
+
+}
+
+div.grid-product-container {
+  padding: 50px;
+  max-width: 260px;
+  height: 351px;
+  position:  relative;
+  border:        1px solid #ccc;
+  border-radius: 5px;
+  padding:       15px;
+  padding-bottom: 80px;
+  margin-top:    20px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 #thumbnail img{
@@ -31,6 +51,11 @@ padding: 50px;
 }
 #gallery{
   max-width: 100%;
+  /* max-width: 250px; */
+  max-height: 250px;
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
 }
 .qrcode{
   width: 50px;
