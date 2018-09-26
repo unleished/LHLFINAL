@@ -28,7 +28,8 @@ class App extends Component {
       <Nav />
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
-          <Route path="/products" component ={() => <ProductContainer />}/>
+
+          <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
         </Switch>
         </div>
       </BrowserRouter>
