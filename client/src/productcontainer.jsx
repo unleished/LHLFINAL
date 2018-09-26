@@ -9,25 +9,26 @@ class ProductContainer extends React.Component {
     super(props);
     this.state = { product: [] }
   }
-    
+
   getProductsbyID(id){
-    fetch(`http://localhost:3001/api/v1/products`)
     
+    fetch(`http://localhost:3001/api/v1/products`)
+
     .then(res => res.json())
     .then(product => { this.setState({ product })})
   }
-  
+
   componentDidMount() {
     this.getProductsbyID(33)
   };
-  
+
   render(){
 
 
     return (
       <div>
     <section id="product-container">
-      <img src={this.state.products.path_1}/>                                                                                                                                                                                                                                                                                                                             
+      <img src={this.state.products.path_1}/>
         <div>
 
         </div>
