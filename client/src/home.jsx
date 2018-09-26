@@ -6,23 +6,28 @@ import GridProduct from "./gridproduct";
 class Home extends Component {
   constructor(props){
     super(props);
-    this.state = { products: [] }
+    this.state = { images: [] }
   }
-  
+
   getProducts(){
-    fetch(`http://localhost:3001/api/v1/products`)
-    
+    fetch(`/api/v1/images`)
+
     .then(res => res.json())
-    .then(products => { this.setState({ products })})
+    .then(images => { this.setState({ images })})
+    console.log(this.state.images)
   }
-  
+
   generateList(){
-    const images = this.state.products.images;
+
+    const images = this.state.images;
     const list = images.map((image)=>
-    <NavLink to={"/products/" + image.product_id}> <GridProduct image={image.path_1}/> </NavLink>);
+    <NavLink to={"/products/" + image.product_id}> <GridProduct image={image.path_1} /> </NavLink>);
     return list;
-    
+
   }
+   componentDidMount() {
+    this.getProducts();
+  };
 render(){
     return (
       <ul>{this.generateList()}</ul>
