@@ -11,15 +11,23 @@ class ProductContainer extends React.Component {
   }
 
   getProductsbyID(id){
-    
+<<<<<<< HEAD
+
     fetch(`http://localhost:3001/api/v1/products`)
+=======
+   let url = `/api/v1/products/${id}`
+    console.log("url: ", url)
+    fetch(url)
+>>>>>>> bug/fixRouting
 
     .then(res => res.json())
-    .then(product => { this.setState({ product })})
+    .then(product => { this.setState({ product: product[0] })})
+    console.log("in getproducts function " , this.state.product)
   }
 
   componentDidMount() {
-    this.getProductsbyID(33)
+    this.getProductsbyID(this.props.match.params.id);
+    console.log("in component did mount " , this.props.match.params.id)
   };
 
   render(){
@@ -28,15 +36,19 @@ class ProductContainer extends React.Component {
     return (
       <div>
     <section id="product-container">
-      <img src={this.state.products.path_1}/>
-        <div>
 
+      <img src={"" + this.state.product.path_1}/>
+
+        <div>
+        <img src={"" + this.state.product.path_2}/>
+        <img src={"" + this.state.product.path_3}/>
+        <img src={"" + this.state.product.path_4}/>
         </div>
      </section>
      <section id="product-description">
-        <h3>{this.product_name}</h3>
+        <h3>{this.state.product.name}</h3>
         <p id="text-description">
-          {this.product_description}
+          {this.state.product.description}
         </p>
         <img className="qrcode" src="http://api.qrserver.com/v1/create-qr-code/?data=http://10.110.105.16:8000&size=10X10"/>
         <p>Check it out in AR!</p>

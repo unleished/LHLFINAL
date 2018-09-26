@@ -30,12 +30,11 @@ router.get("/", function(req, res, next) {
 });
 
 router.get("/:id", function(req, res, next) {
-  console.log('request:' , req.params.id);
-  knex
-    .select("*")
-    .from("products")
-    .where({'id': 2})
+
+  knex.from('products').innerJoin('images', 'products.id', 'images.product_id')
+    .where({'id': req.params.id})
     .then(rows => {
+      console.log(rows);
       res.json(rows);
     })
     .catch(error => {
