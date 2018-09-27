@@ -13,7 +13,7 @@ import {
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
-<<<<<<< HEAD
+
 import AR from "./AR";
 
 

@@ -11,17 +11,10 @@ class ProductContainer extends React.Component {
   }
 
   getProductsbyID(id){
-<<<<<<< HEAD
 
-    fetch(`http://localhost:3001/api/v1/products`)
-=======
    let url = `/api/v1/products/${id}`
     fetch(url)
-<<<<<<< HEAD
->>>>>>> bug/fixRouting
 
-=======
->>>>>>> feature/updateNav
     .then(res => res.json())
     .then(product => { this.setState({ product: product[0] })})
   }
@@ -35,7 +28,6 @@ class ProductContainer extends React.Component {
     return (
       <div>
     <section id="product-container">
-<<<<<<< HEAD
 
       <img src={"" + this.state.product.path_1}/>
 
@@ -44,12 +36,6 @@ class ProductContainer extends React.Component {
         <img src={"" + this.state.product.path_3}/>
         <img src={"" + this.state.product.path_4}/>
         </div>
-=======
-          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_1}/>
-          <img id="gallery" id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_2}/>
-          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_3}/>
-          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_4}/>
->>>>>>> feature/updateNav
      </section>
      <section id="product-description">
         <h3>{this.state.product.name}</h3>
