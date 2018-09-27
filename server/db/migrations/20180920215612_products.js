@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
       table.text('description');
       table.string('category');
       table.integer('price');
+      table.text('qrcode');
     }),
   ]);
 };
