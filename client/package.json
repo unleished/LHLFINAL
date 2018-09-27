@@ -20,6 +20,8 @@
   "proxy": {
     "/api": {
       "target": "https://lhlvyoo.herokuapp.com/"
+
     }
+
   }
 }
