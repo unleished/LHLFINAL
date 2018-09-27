@@ -1,31 +1,104 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang=”en”>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Name of your awesome camera app -->
+    <!-- Link to your main style sheet-->
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
-
+    <!-- AR scripts-->
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://3d.io/releases/3dio-js/1.x.x-beta/3dio.min.js"></script>
-    <script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
-    <title></title>
-  </head>
-  <body>
-    <h1> This is AR </h1>
+    <style>
+    button {
+      z-index: 9000;
+
+    }
+      video {
+        height: 100%;
+        width: 100%;
+        position: static;
+      }
+      a-scene {
+        height: 100%;
+        width: 100%;
+        position: static;
+      }
+      /* video {
+        z-index: 0;
+      } */
+      .a-enter-vr {
+        display: none;
+      }
+    </style>
+</head>
 
 
-      <a-scene embedded artoolkit='sourceType: webcam;'>
+<body>
 
 
+        <video id="camera--view" autoplay playsinline></video>
+        <button id="camera--trigger">Place the item</button>
+        <a-scene  ar ar-raycaster raycaster cursor="fuse:false" antialias="true">
 
-          <!-- <a-entity io3d-furniture="id:9a17f541-886e-467e-b740-cf665d74af11" position="0 0 0"></a-entity> -->
-          <a-camera preset='hiro'></a-camera>
+          <a-assets>
+            <a-video src="#camera--view"></a-video>
 
-        <!-- <a-entity io3d-furniture="id:8c4c4d48-dc51-4371-876a-09d51f10b66b" position="0 0.5 1"></a-entity> -->
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <!-- <a-sky color="#ECECEC"></a-sky> -->
-      </a-scene>
-  </body>
+          </a-assets>
+
+
+          <a-entity id="mark" io3d-furniture="id:345f3fb8-f834-491b-8ea8-a90bbbbeb3ef"  color="black" scale="1 1 1" rotation="0 30 0" position="0 .5 -2"></a-entity>
+
+        </a-scene>
+
+
+<!-- <a-entity camera></a-entity> -->
+
+    <script>
+    // Set constraints for the video stream
+    var constraints = { video: { facingMode: "environment"}, audio: false };
+
+    // Define constants
+    const cameraView = document.querySelector("#camera--view"),
+        cameraOutput = document.querySelector("#camera--output"),
+        cameraSensor = document.querySelector("#camera--sensor"),
+        cameraTrigger = document.querySelector("#camera--trigger")
+    // Access the device camera and stream to cameraView
+    function cameraStart() {
+        navigator.mediaDevices
+            .getUserMedia(constraints)
+            .then(function(stream) {
+            track = stream.getTracks()[0];
+            cameraView.srcObject = stream;
+        })
+        .catch(function(error) {
+            console.error("Oops. Something is broken.", error);
+        });
+    }
+    // cameraTrigger.onclick = function() {
+    //     // cameraSensor.width = cameraView.videoWidth;
+    //     // cameraSensor.height = cameraView.videoHeight;
+    //     // cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+    //     // cameraOutput.src = cameraSensor.toDataURL("image/webp");
+    //     // cameraOutput.classList.add("taken");
+    //     var raycaster = document.querySelector('[ar-raycaster]');
+    //     var mark = document.querySelector('#mark');
+    //
+    // };
+    window.addEventListener("load", cameraStart, false);
+
+   // const cameraMark = document.querySelector('#mark')
+   // cameraMark.addEventListener("click", function(e)
+   //     {
+   //        console.log("mark");
+   //         window.location.href = './Video1/index.html';
+   //         this.style.display = 'none';
+   //     }, false);
+   //
+
+
+    </script>
+
+</body>
 </html>
