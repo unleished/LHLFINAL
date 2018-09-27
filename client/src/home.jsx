@@ -10,15 +10,13 @@ class Home extends Component {
   }
 
   getProducts(){
-    fetch(`/api/v1/images`)
-
+    let url = `/api/v1/images`;
+    fetch(url)
     .then(res => res.json())
     .then(images => { this.setState({ images })})
-    console.log(this.state.images)
   }
 
   generateList(){
-
     const images = this.state.images;
     const list = images.map((image)=>
     <NavLink to={"/products/" + image.product_id}> <GridProduct image={image.path_1} /> </NavLink>);

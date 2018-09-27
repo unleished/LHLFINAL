@@ -33,6 +33,10 @@ div.grid-product-container {
   margin-bottom: 20px;
   overflow: hidden;
 }
+h3{
+  font-weight: normal;
+  color: black;
+}
 
 #thumbnail img{
   width: 100px;
@@ -46,8 +50,9 @@ div.grid-product-container {
   right: 0;
 }
 #text-description{
-  font-size: 24px;
-  margin-top: 20%;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-top: 5%;
 }
 #gallery{
   max-width: 100%;

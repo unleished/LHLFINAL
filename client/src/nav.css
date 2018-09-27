@@ -6,7 +6,7 @@ top: 0;
 position: fixed;
 height: 100px;
 background-color: white;
-color: #FBD2D7;
+color: black;
 padding: 0 2em 0;
 z-index: 10;
 }
@@ -26,7 +26,7 @@ z-index: 10;
 
 #nav-bar li a:link, a:visited{
   text-decoration: none;
-  color: #FBD2D7;
+  color: black;
 }
 
 #nav-bar .logo{
