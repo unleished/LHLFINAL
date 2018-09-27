@@ -30,7 +30,6 @@ class ProductContainer extends React.Component {
     <section id="product-container">
 
       <img src={"" + this.state.product.path_1}/>
-
         <div>
         <img src={"" + this.state.product.path_2}/>
         <img src={"" + this.state.product.path_3}/>
@@ -42,7 +41,7 @@ class ProductContainer extends React.Component {
         <p id="text-description">
           {this.state.product.description}
         </p>
-        <img className="qrcode" src="http://api.qrserver.com/v1/create-qr-code/?data=http://10.110.105.16:8000&size=10X10"/>
+        <img className="qrcode" src=`http://api.qrserver.com/v1/create-qr-code/?data=${this.state.product.qrcode}&size=10X10`/>
         <p>Check it out in AR!</p>
      </section>
      </div>
