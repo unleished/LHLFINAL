@@ -10,7 +10,7 @@ class Home extends Component {
   }
 
   getProducts(){
-    let url = `/api/v1/images`;
+    let url = `https://lhlvyoo.herokuapp.com/api/v1/images`;
     fetch(url)
     .then(res => res.json())
     .then(images => { this.setState({ images })})
