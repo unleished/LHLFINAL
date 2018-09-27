@@ -12,7 +12,7 @@ class ProductContainer extends React.Component {
 
   getProductsbyID(id){
 
-   let url = `/api/v1/products/${id}`
+   let url = `http://localhost:3001/api/v1/products/${id}`
     fetch(url)
 
     .then(res => res.json())
