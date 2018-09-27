@@ -13,7 +13,11 @@ import {
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
+<<<<<<< HEAD
 import AR from "./AR";
+
+
+import Footer from "./footer";
 
 
 class App extends Component {
@@ -30,11 +34,11 @@ class App extends Component {
       <Nav />
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
-
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
         </Switch>
         </div>
       </BrowserRouter>
+      <Footer />
     </div>
 
     );

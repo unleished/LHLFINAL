@@ -34,7 +34,6 @@ router.get("/:id", function(req, res, next) {
   knex.from('products').innerJoin('images', 'products.id', 'images.product_id')
     .where({'id': req.params.id})
     .then(rows => {
-      console.log(rows);
       res.json(rows);
     })
     .catch(error => {

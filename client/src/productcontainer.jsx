@@ -2,7 +2,7 @@
 import "./App.css";
 import "./App.js";
 
-// let productsRouter = require('./routes/api/v1/products');
+
 
 class ProductContainer extends React.Component {
   constructor(props){
@@ -16,26 +16,26 @@ class ProductContainer extends React.Component {
     fetch(`http://localhost:3001/api/v1/products`)
 =======
    let url = `/api/v1/products/${id}`
-    console.log("url: ", url)
     fetch(url)
+<<<<<<< HEAD
 >>>>>>> bug/fixRouting
 
+=======
+>>>>>>> feature/updateNav
     .then(res => res.json())
     .then(product => { this.setState({ product: product[0] })})
-    console.log("in getproducts function " , this.state.product)
   }
 
   componentDidMount() {
     this.getProductsbyID(this.props.match.params.id);
-    console.log("in component did mount " , this.props.match.params.id)
+
   };
 
   render(){
-
-
     return (
       <div>
     <section id="product-container">
+<<<<<<< HEAD
 
       <img src={"" + this.state.product.path_1}/>
 
@@ -44,6 +44,12 @@ class ProductContainer extends React.Component {
         <img src={"" + this.state.product.path_3}/>
         <img src={"" + this.state.product.path_4}/>
         </div>
+=======
+          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_1}/>
+          <img id="gallery" id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_2}/>
+          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_3}/>
+          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_4}/>
+>>>>>>> feature/updateNav
      </section>
      <section id="product-description">
         <h3>{this.state.product.name}</h3>
