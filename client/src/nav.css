@@ -1,40 +1,38 @@
-
-
-#nav-bar{
-display: flex;
-flex-direction: row;
-align-items: center;
-flex: 1;
-width: 100%;
-top: 0;
-position: fixed;
-height: 100px;
-background-color: white;
-color: black;
-z-index: 10;
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  height: 100px;
+  background-color: white;
+  z-index: 100;
+  padding: 2em;
 }
 
-#nav-bar-items {
+.nav-bar-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-
-#nav-bar li{
+.nav-bar li{
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   list-style: none;
   padding-right: 2em;
+
 }
 
-#nav-bar li a:link, a:visited{
+.nav-bar li a:link, a:visited{
   text-decoration: none;
   color: black;
 }
 
-#nav-bar .logo{
+.nav-bar .logo{
   width: 20%;
   float:left;
 }

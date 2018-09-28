@@ -2,14 +2,16 @@
 html {
   box-sizing: border-box;
 }
+
 * {
   box-sizing: inherit;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 body {
-  margin: 120;
-  color: #244751;
+  padding-top: 100px;
+  /* margin: 120; */
+  color: black;
   background-color: white;
   font-family: 'Roboto', sans-serif;
 }
@@ -19,11 +21,12 @@ img#gallery{
   max-height: 250px;
   position: relative;
   padding: 10px;
+  border: none;
 }
 
 ul{
   display:         flex;
-    /* flex-direction:  row; */
+    flex-direction:  row;
     flex-wrap:       wrap;
     justify-content: space-around;
 

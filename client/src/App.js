@@ -9,6 +9,10 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
@@ -25,19 +29,19 @@ class App extends Component {
   render() {
 
     return (
-    <div className="container">
+    <div className="container-fluid">
       <BrowserRouter>
-      <div>
+        <div>
       <Nav />
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
           <Route path="/categories/:category" component ={(props) => <Category {...props} />}/>
-
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
           <Route path="/login" component={() =><Login />} />
         </Switch>
-        </div>
+      </div>
       </BrowserRouter>
+
       <Footer />
     </div>
 
