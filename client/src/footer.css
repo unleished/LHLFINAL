@@ -1,17 +1,16 @@
 
 
 #footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   bottom: 0;
-  position: fixed;
+  /* position: fixed; */
   height: 250px;
-  background-color: white;
+  background-color: #ffd1dc;
   color: black;
-  padding: 0 2em 0;
-  z-index: 10;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  /* padding: 0 2em 0; */
 }
 
 .footText{

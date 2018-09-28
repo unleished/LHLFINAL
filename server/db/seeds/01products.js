@@ -26,19 +26,19 @@ exports.seed = function(knex, Promise) {
         qrcode: 'http://api.qrserver.com/v1/create-qr-code/?data=product_3&size=100x100'
       },
         { name: 'The Plate Table',
-        category: 'Tables',
+        category: 'tables',
         description: "In keeping with Jasper Morrison's philosophy of 'super normal' design, his Plate Tables are characterised by an unassuming, classic shape and finely balanced proportions. Available in different sizes, the tables derive their charm from the successful interplay of subtle curves and precisely defined edges. The refined base and the thin table top in premium solid wood, marble or powder-coated MDF form a harmonious whole, yet are clearly distinct from each other. The dimensions of the Plate Tables are coordinated so that several tables can be grouped together to form a large surface area or to create diverse arrangements. This flexibility offers ideal solutions in regard to both size and shape for the requirements of different interiors or for unusual sofa configurations.",
         price: '875',
         qrcode: 'http://api.qrserver.com/v1/create-qr-code/?data=product_4&size=100x100'
       },
         { name: 'The Bondt Square',
-        category: 'Tables',
+        category: 'tables',
         description: "Lovingly handcrafted in Scandinavia, The BONDT family of tables has the seemingly thin table top balanced on two trestles in an exciting contrast with broad planks. The product programme comprises dining tables as well as desks, coffee tables, couch tables and an array of various side tables. Designed to blend with any environment, the BONDT Table is doubtless an invaluable addition to your living area.",
         price: '1200',
         qrcode: 'http://api.qrserver.com/v1/create-qr-code/?data=product_5&size=100x100'
       },
         { name: 'The Desalto Table',
-        category: 'Tables',
+        category: 'tables',
         description: "An iconic table, Desalto is a symbol of purity and poetry, the essence of the visionary designer Tokujin Yoshioka's style. The central support, delicately balanced between the two horizontal elements, defies gravity, suspended between earth and sky, between the past and the future.",
         price: '2500',
         qrcode: 'http://api.qrserver.com/v1/create-qr-code/?data=product_6&size=100x100'
@@ -111,4 +111,3 @@ exports.seed = function(knex, Promise) {
     });
   });
 };
-

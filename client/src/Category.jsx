@@ -2,35 +2,51 @@ import React, { Component } from "react";
 import "./App.css";
 import { NavLink } from "react-router-dom";
 import GridProduct from "./gridproduct";
-import Category from "./Category";
 
-class Home extends Component {
+
+class Category extends Component {
   constructor(props){
     super(props);
     this.state = { images: [] }
   }
 
-  getProducts(){
+  getAllImages(){
     let url = `/api/v1/images`;
     fetch(url)
     .then(res => res.json())
     .then(images => { this.setState({ images })})
+    console.log("getAllImages: ", this.state)
+
+  }
+
+  getImagesByCat(category){
+    let url = `/api/v1/images/${category}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(images => { this.setState({ images })})
+    console.log("getImagesbyCat: ", this.state)
+
   }
 
   generateList(){
     const images = this.state.images;
+    console.log("generateList: ", this.state)
+
     const list = images.map((image)=>
     <NavLink to={"/products/" + image.product_id}> <GridProduct key={image.id} image={image.path_1} /> </NavLink>);
     return list;
 
   }
+
    componentDidMount() {
-    this.getProducts();
+    this.getAllImages();
+    this.getImagesByCat(this.props.match.params.category);
+
+    console.log("this match: ", this.props.match)
+
   };
-//   componentWillMount(){
-//     if(this.Auth.loggedIn())
-//         this.props.history.replace('/');
-// }
+
+
 render(){
     return (
       <ul>{this.generateList()}</ul>
@@ -41,4 +57,4 @@ render(){
 }
 
 
-export default Home
+export default Category;
