@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import "./nav.css";
+import "./footer.css";
 import "./index.css";
 import {
   Route,
   Switch,
-  NavLink,
   BrowserRouter
 } from "react-router-dom";
 
@@ -14,10 +13,8 @@ import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
 
-import AR from "./AR";
-
-
 import Footer from "./footer";
+import Login from "./login";
 
 
 class App extends Component {
@@ -28,13 +25,13 @@ class App extends Component {
 
     return (
     <div className="container">
-
       <BrowserRouter>
       <div>
       <Nav />
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
+          <Route path="/login" component={() =><Login />} />
         </Switch>
         </div>
       </BrowserRouter>

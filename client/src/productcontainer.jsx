@@ -4,7 +4,7 @@ import "./App.js";
 
 
 
-class ProductContainer extends React.Component {
+class ProductContainer extends Component {
   constructor(props){
     super(props);
     this.state = { product: [] }
@@ -28,13 +28,11 @@ class ProductContainer extends React.Component {
     return (
       <div>
     <section id="product-container">
-
-
         <div>
-          <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_1}/>
-        <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_2}/>
-        <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_3}/>
-        <img id="gallery" className="img-fluid img-thumbnail" src={"" + this.state.product.path_4}/>
+          <img id="gallery" className="img-fluid img-thumbnail" alt="" src={"" + this.state.product.path_1}/>
+        <img id="gallery" className="img-fluid img-thumbnail" alt="" src={"" + this.state.product.path_2}/>
+        <img id="gallery" className="img-fluid img-thumbnail" alt="" src={"" + this.state.product.path_3}/>
+        <img id="gallery" className="img-fluid img-thumbnail" alt="" src={"" + this.state.product.path_4}/>
         </div>
      </section>
      <section id="product-description">
@@ -42,7 +40,7 @@ class ProductContainer extends React.Component {
         <p id="text-description">
           {this.state.product.description}
         </p>
-        <img className="qrcode" src={this.state.product.qrcode}/>
+        <img className="qrcode" alt="" src={this.state.product.qrcode}/>
         <p>Check it out in AR!</p>
      </section>
      </div>

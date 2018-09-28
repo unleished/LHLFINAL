@@ -26,6 +26,10 @@ class Home extends Component {
    componentDidMount() {
     this.getProducts();
   };
+//   componentWillMount(){
+//     if(this.Auth.loggedIn())
+//         this.props.history.replace('/');
+// }
 render(){
     return (
       <ul>{this.generateList()}</ul>
