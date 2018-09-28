@@ -14,9 +14,6 @@ import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
 
-import AR from "./AR";
-
-
 import Footer from "./footer";
 
 
