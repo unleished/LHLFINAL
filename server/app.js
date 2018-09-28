@@ -29,7 +29,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/images', imagesRouter);
-app.user('/api/v1/users', usersRouter);
+app.use('/api/v1/users', usersRouter);
 
 
 // catch 404 and forward to error handler
