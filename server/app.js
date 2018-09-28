@@ -8,6 +8,7 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/api/v1/products');
 var imagesRouter = require('./routes/api/v1/images');
+var usersRouter = require('./routes/api/v1/users');
 
 const knexConfig = require('./knexfile');
 const knex = require("knex")(knexConfig["development"]); require("dotenv").config();
@@ -28,6 +29,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/images', imagesRouter);
+app.user('/api/v1/users', usersRouter);
 
 
 // catch 404 and forward to error handler
