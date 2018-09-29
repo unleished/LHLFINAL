@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import { NavLink } from "react-router-dom";
+import { NavLink , Redirect} from "react-router-dom";
 import GridProduct from "./gridproduct";
+
 
 class Home extends Component {
   constructor(props){
@@ -23,21 +24,20 @@ class Home extends Component {
     return list;
 
   }
-   componentDidMount() {
+  componentDidMount() {
     this.getProducts();
   };
-//   componentWillMount(){
-//     if(this.Auth.loggedIn())
-//         this.props.history.replace('/');
-// }
+
+
 render(){
     return (
+    <div>
       <ul>{this.generateList()}</ul>
 
-
+    </div>
     );
   }
 }
 
 
-export default Home
+export default Home;

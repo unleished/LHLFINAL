@@ -16,15 +16,14 @@ router.get("/", function(req, res, next) {
     });
 });
 
-router.get("/login", function(req, res, next) {
+router.post("/login", function(req, res, next) {
   knex
     .select("*")
     .from("users")
-    .where(email: req.email)
+    .where('email', req.body.email)
     .then(rows => {
+      console.log('hahahaha: '+ rows)
       res.json(rows);
-      passwrod from db = pass from req
-
     })
     .catch(error => {
       console.error("error: ", error);

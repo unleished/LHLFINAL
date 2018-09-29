@@ -1,49 +1,63 @@
 import React, { Component } from "react";
 import "./login.css";
-import AuthService from './AuthService';
+
 
 class Login extends Component{
 
-  constructor(s){
-    super();
-    this.handleChange = this.handleChange.bind(this);
-    this.Auth = new AuthService();
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  constructor(props){
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e){
-          this.setState({
-            [e.target.name]: e.target.value
-              })
-  }
-   handleFormSubmit(e){
-        e.preventDefault();
+  // handleChange(e){
+  //         this.setState({
+  //           [e.target.name]: e.target.value
+  //             })
+  // }
 
-        this.Auth.login(this.state.username,this.state.password)
-            .then(res =>{
+ handleSubmit(e){
+    e.preventDefault();
+    const that = this;
+    debugger
+    let reqBody = {
+      email: this.refs.email.value,
+      password: this.refs.password.value,
+    };
 
-
-
-               this.props.history.replace('/');
-            })
-            .catch(err =>{
-                alert(err);
-            })
+    fetch("/api/v1/usersRouter/login", {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            // "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: JSON.stringify(reqBody), // body data type must match "Content-Type" header
+    })
+      .then((res) => {
+        if (res.status === 200) {
+            window.sessionStorage.accessToken = res.token;
+            that.props.setCurrentUser({id: res.id, email: reqBody.email});
+        }
+        else {
+            alert("Invalid Email or Password");
+        }
+      })
     }
 
 render(){
     return (
-      <form className="modal-content animate" action="/action_page.php">
-      <div className="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required onChange={this.handleChange}/>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required/>
-
-        <button type="submit">Login</button>
-      </div>
-      </form>
+      <form onSubmit={this.handleSubmit} className="login-form">
+            <div>
+              <label >Email:</label>
+              <input ref="email" type="text" required="true"/>
+            </div>
+            <div>
+              <label>Password:</label>
+              <input ref="password" type="password" required="true"/>
+            </div>
+            <div>
+              <input type="submit" value="Login"/>
+            </div>
+          </form>
     );
   }
 }
