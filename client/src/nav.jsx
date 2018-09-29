@@ -7,8 +7,8 @@ import {
 function Nav (props) {
 
     return (
-      <div className="nav-bar">
-        <nav id="nav-bar">
+      <div className="nav-bar d-flex-row align-items-center">
+        <nav id="nav-bar" className="d-flex row align-items-center">
           <img className="logo" alt="" src="/images/tryitlogo.png"/>
             <ul className="nav-bar-items">
               <li className="nav-item active">
