@@ -6,7 +6,6 @@ import "./App.css";
 function GridProduct (props) {
 
 const imageURL = props.image
-console.log("grid product" + imageURL);
 
     return (
       <div>
@@ -19,4 +18,3 @@ console.log("grid product" + imageURL);
 
 
 export default GridProduct
-

@@ -41,7 +41,11 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/images', imagesRouter);
+<<<<<<< HEAD
 app.use('/api/v1/usersRouter', usersRouter);
+=======
+app.use('/api/v1/users', usersRouter);
+>>>>>>> 7255c80403716c9c18c13cdda82155fe7ea393a6
 
 
 // error handler

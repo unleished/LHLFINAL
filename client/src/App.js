@@ -9,11 +9,16 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import ProductContainer from "./productcontainer";
 import Nav from "./nav";
 import Home from "./home";
 import Footer from "./footer";
 import Login from "./login";
+import Category from "./Category";
 
 
 
@@ -31,19 +36,20 @@ setCurrentUser(user){
 
   render() {
     return (
-    <div className="container">
+    <div className="container-fluid">
       <BrowserRouter>
+
       <div>
       <Nav user={this.state.user}/>
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
+          <Route path="/categories/:category" component ={(props) => <Category {...props} />}/>
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
           <Route path="/login" component={(props) => <Login {...props} setCurrentUser={this.setCurrentUser} />}/>
         </Switch>
-        </div>
+      </div>
       </BrowserRouter>
       <Footer />
-
     </div>
 
     );

@@ -1,10 +1,3 @@
-body {
-  margin: 120px;
-}
-.header{
-  font-size: 30px;
-}
-
 .container{
   margin: 200px 0px 0px 0px;
   width: 100%;
@@ -14,7 +7,14 @@ body {
   justify-content: space-around;
 }
 
-#product-container{
+.homePage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-container{
   width: 50%;
   float: left;
 
@@ -33,35 +33,35 @@ div.grid-product-container {
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 h3{
   font-weight: normal;
   color: black;
 }
 
-#thumbnail img{
-  width: 100px;
-  background-color: red;
-}
-
-#product-description{
-  padding: 50px;
+.product-description{
+  padding-right: 50px;
   float:right;
   width: 50%;
   right: 0;
 }
-#text-description{
+
+.text-description{
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   margin-top: 5%;
+  margin-right: 25px;
 }
-#gallery{
+
+.gallery{
   max-width: 100%;
   /* max-width: 250px; */
-  max-height: 250px;
+  /* max-height: 250px; */
   position: relative;
   padding: 10px;
   overflow: hidden;
 }
+
 .qrcode{
   width: 50px;
 }
