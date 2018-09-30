@@ -7,16 +7,8 @@ class Category extends Component {
   constructor(props){
     super(props);
     this.state = { images: [] }
+    console.log("category sttate: ", this.state)
   }
-
-  // getAllImages(){
-  //   let url = `/api/v1/images`;
-  //   fetch(url)
-  //   .then(res => res.json())
-  //   .then(images => { this.setState({ images })})
-  //   console.log("getAllImages: ", this.state)
-  //
-  // }
 
   getImagesByCat(category){
     let url = `/api/v1/images/${category}`;
@@ -37,13 +29,23 @@ class Category extends Component {
   }
 
    componentDidMount() {
-    // this.getAllImages();
     this.getImagesByCat(this.props.match.params.category);
   };
 
+  capitalizeCatName(name){
+    return name.charAt(0).toUpperCase() + name.slice(1)
+  }
+
 render(){
     return (
-      <ul>{this.generateList()}</ul>
+      <div className="categoryPage">
+        <div className="categoryHeader d-flex justify-content-center align-items-center text-white">
+          <h1>{this.capitalizeCatName(this.props.match.params.category)}</h1>
+        </div>
+        <div className="category-layout my-3">
+          <ul>{this.generateList()}</ul>
+        </div>
+      </div>
     );
   }
 }

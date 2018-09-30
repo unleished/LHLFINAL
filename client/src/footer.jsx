@@ -5,9 +5,9 @@ import "./footer.css";
 function Footer (props) {
 
     return (
-      <div id="footer">
+      <div className="vyoofooter">
 
-          <div id="footerwrapper">
+          <div className="footerwrapper">
             <div className="footText">
 
               <p>1234 Notre Dame Ouest</p>
