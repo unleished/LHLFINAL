@@ -19,6 +19,7 @@ import Home from "./home";
 import Footer from "./footer";
 import Login from "./login";
 import Category from "./Category";
+import Register from "./register";
 
 
 
@@ -63,6 +64,7 @@ componentWillMount(){
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
           <Route path="/login" component={(props) => <Login {...props} setCurrentUser={this.setCurrentUser} />}/>
           <Route path='/logout' render={this.handleLogout} />
+          <Route path='/register' component={() => <Register />}/>
         </Switch>
        </div>
       </BrowserRouter>

@@ -2,9 +2,11 @@ var express = require("express");
 var router = express.Router();
 const knexConfig = require("../../../knexfile.js");
 const knex = require("knex")(knexConfig["development"]);
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
+const jsonWebToken = require("jsonwebtoken");
+const myJWTSecretKey = 'my-secret-key';
 
-/* GET users listing. */
+
 router.get("/", function(req, res, next) {
   knex
     .select("*")
@@ -24,24 +26,47 @@ router.post("/login", function(req, res, next) {
     .from("users")
     .where({email: req.body.email}).first()
     .then(row => {
-      res.json(row);
-      // bcrypt.compare(req.body.password, row.password, function(err, res) {
-      //   console.log(res);
-      //     if(res){
-      //      res.json({email: row.email});
-      //       const token = jsonWebToken.sign(user, myJWTSecretKey);
-      //       res.json({
-      //         token: token
-      //        });
-      //     }else{
-      //      console.error("error: ", err);
-      //     }
-      //    })
-        })
+      console.log(row);
+      bcrypt.compare(req.body.password, row.password, function(err, response) {
+          if(response){
+            const token = jsonWebToken.sign(row, myJWTSecretKey);
+            res.json({
+              token: token
+            });
+            console.log(token);
+          }else{
+            console.error("error inside: ", err);
+          }
+      })
+    })
     .catch(error => {
       console.error("error: ", error);
     });
 });
 
+
+router.post("/register", function(req, res, next) {
+  const user = {
+    email: req.body.email
+  };
+console.log("user in server", user);
+  bcrypt.hash(req.body.password, 10, function(err, hash) {
+
+    user.password = hash;
+    console.log("user in server 2", user);
+    knex('users').insert(user)
+    .then(() => {
+      const token = jsonWebToken.sign(user, myJWTSecretKey);
+      res.json({
+        token: token
+      });
+    })
+
+
+  });
+  // extract user info from the form -> create the user object
+  // save it to database (bcrypt for password)
+
+});
 
 module.exports = router;

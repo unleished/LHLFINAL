@@ -7,7 +7,7 @@ class Register extends Component{
   constructor(s){
     super();
     this.handleChange = this.handleChange.bind(this);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = { user: [], token: '' }
   }
   verifyToken(){
@@ -25,15 +25,15 @@ class Register extends Component{
       password: this.refs.password.value,
       confirmPassword: this.refs.confirmPassword.value
     };
-
-    fetch("/register", {
-      method: "POST",
-      body: JSON.stringify(reqBody)
+    fetch("/api/v1/users/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        },
+        body: JSON.stringify(reqBody)
     })
       .then((res) => {
         if (res.ok){
-          console.log("res in register front end", res);
-
           redirect: window.location.replace("./home.html")
           return res.json();
         } else {
