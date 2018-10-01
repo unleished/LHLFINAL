@@ -6,7 +6,9 @@
   flex-wrap:       wrap;
   justify-content: space-around;
 } */
-
+p {
+  font-size: 16px;
+}
 .homePage {
   display: flex;
   flex-direction: row;
@@ -151,5 +153,5 @@ h3{
 
 
 .qrcode{
-  width: 50px;
+  width: 70%;
 }

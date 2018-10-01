@@ -63,11 +63,18 @@ class ProductContainer extends Component {
           </div>
 
         </div>
-        <div className="product-description col-md-6">
-          <h1>{this.state.product.name}</h1>
-          <p className="text-description">{this.state.product.description}</p>
-          <img className="qrcode" alt="" src={this.state.product.qrcode}/>
-          <p>Check it out in AR!</p>
+        <div className="product-description col-md-6 pb-5">
+            <h1>{this.state.product.name}</h1>
+            <p className="text-description">{this.state.product.description}</p>
+          <div className="row">
+            <div className="col">
+              <h1>Try it at Home</h1>
+              <p>Use vyoo AR to test furniture in your home.</p>
+            </div>
+            <div className="col">
+              <img className="qrcode" alt="" src={this.state.product.qrcode}/>
+            </div>
+          </div>
         </div>
 
 
