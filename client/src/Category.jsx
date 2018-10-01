@@ -37,9 +37,21 @@ class Category extends Component {
   }
 
 render(){
+  var styles = {
+      height: "200px",
+      backgroundColor: "black",
+      borderRadius: ".3rem",
+      backgroundImage: `url(../images/catbanners/${this.props.match.params.category}/1.jpeg)`,
+      filter: "grayscale(100%)",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover"
+
+  }
+
+
     return (
       <div className="categoryPage">
-        <div className="categoryHeader d-flex justify-content-center align-items-center text-white">
+        <div className="categoryHeader d-flex justify-content-center align-items-center text-white" style={styles}>
           <h1>{this.capitalizeCatName(this.props.match.params.category)}</h1>
         </div>
         <div className="category-layout my-3">

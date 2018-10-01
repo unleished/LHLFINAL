@@ -63,16 +63,15 @@ p {
 
 
 
-.categoryHeader {
+/* .categoryHeader {
   height: 200px;
   background-color: black;
   border-radius: .3rem;
-  background-image: url("https://images.unsplash.com/photo-1507878866276-a947ef722fee?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=240ea62f8829c8f46b0ffc27967109fd&auto=format&fit=crop&w=1051&q=80");
-  /* filter: grayscale(100%); */
+  background-image: url("https://images.unsplash.com/photo-1525622408046-0e6ae8ce186e?ixlib=rb-0.3.5&s=8759a8d659cd6de2b89c61955a430bd9&auto=format&fit=crop&w=667&q=80");
+  filter: grayscale(100%);
   background-repeat: no-repeat;
   background-size: cover;
-
-}
+} */
 
 .catItemDetails a:hover {
   text-decoration: none;
