@@ -27,56 +27,58 @@ class ProductContainer extends Component {
 
   render(){
     return (
-      <div>
-        <div>
-    <section className="product-container">
-        <div>
-          <img className="gallery" alt={"" + this.state.product.name} src={"" + this.state.product.path_1}/>
-          <img className="gallery" alt={"" + this.state.product.name} src={"" + this.state.product.path_2}/>
-          <img className="gallery" alt={"" + this.state.product.name} src={"" + this.state.product.path_3}/>
-          <img className="gallery" alt={"" + this.state.product.name} src={"" + this.state.product.path_4}/>
-        </div>
-     </section>
-     <section className="product-description">
-        <h3>{this.state.product.name}</h3>
-        <p className="text-description">
-          {this.state.product.description}
-        </p>
-        <img className="qrcode" alt="" src={this.state.product.qrcode}/>
-        <p>Check it out in AR!</p>
-     </section>
-     </div>
+      <div className="container-fluid">
+        <div className="product-container col-md-6 p-auto">
+          <div id="carousel-thumb" className="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+              <div className="carousel-inner" role="listbox">
+                  <div className="carousel-item active">
+                      <img className="d-block w-100" src={"" + this.state.product.path_1} alt="First slide"/>
+                  </div>
+                  <div className="carousel-item">
+                      <img className="d-block w-100" src={"" + this.state.product.path_2} alt="Second slide"/>
+                  </div>
+                  <div className="carousel-item">
+                      <img className="d-block w-100" src={"" + this.state.product.path_3} alt="Third slide"/>
+                  </div>
+                  <div className="carousel-item">
+                      <img className="d-block w-100" src={"" + this.state.product.path_4} alt="Third slide"/>
+                  </div>
+              </div>
 
-     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src={"" + this.state.product.path_1} alt="First slide"/>
+              <a className="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                  <span className="fas fa-chevron-left" aria-hidden="true"></span>
+                  <span className="sr-only">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+                  <span className="fas fa-chevron-right" aria-hidden="true"></span>
+                  <span className="sr-only">Next</span>
+              </a>
+              <ol className="carousel-indicators">
+                  <li data-target="#carousel-thumb" data-slide-to="0" className="active"> <img className="d-block w-100" src={"" + this.state.product.path_1} className="img-fluid"/></li>
+                  <li data-target="#carousel-thumb" data-slide-to="1"><img className="d-block w-100" src={"" + this.state.product.path_2} className="img-fluid"/></li>
+                  <li data-target="#carousel-thumb" data-slide-to="2"><img className="d-block w-100" src={"" + this.state.product.path_3} className="img-fluid"/></li>
+                  <li data-target="#carousel-thumb" data-slide-to="3"><img className="d-block w-100" src={"" + this.state.product.path_4} className="img-fluid"/></li>
+
+              </ol>
           </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src={"" + this.state.product.path_2} alt="Second slide"/>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src={"" + this.state.product.path_3} alt="Third slide"/>
+
+        </div>
+        <div className="product-description col-md-6 pb-5">
+            <h1>{this.state.product.name}</h1>
+            <p className="text-description">{this.state.product.description}</p>
+          <div className="row">
+            <div className="col">
+              <h1>Try it at Home</h1>
+              <p>Use vyoo AR to test furniture in your home.</p>
+            </div>
+            <div className="col">
+              <img className="qrcode" alt="" src={this.state.product.qrcode}/>
+            </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+
+
       </div>
-    </div>
-
-
-
 
      );
   }

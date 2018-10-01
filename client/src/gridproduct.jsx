@@ -12,6 +12,7 @@ const imageURL = props.image
         <a href="#" className="d-block mb-4 h-100">
           <img id="gallery" className="img-fluid img-thumbnail" src={"" + imageURL} alt="" />
         </a>
+        
       </div>
     );
   }
