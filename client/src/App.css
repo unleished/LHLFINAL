@@ -9,6 +9,7 @@
 p {
   font-size: 16px;
 }
+
 .homePage {
   display: flex;
   flex-direction: row;
@@ -18,10 +19,6 @@ p {
 
 }
 
-.hplogoname {
-  font-size: 120px;
-  color: #343a40;
-}
 
 .jumbotron {
   display: flex;
@@ -36,6 +33,11 @@ p {
   height: 520px;
   align-items: center;
   justify-content: space-around;
+}
+
+.jumbotron h1{
+  font-size: 120px;
+  color: #343a40;
 }
 
 .hpleft {
@@ -72,6 +74,22 @@ p {
 
 }
 
+.catItemDetails a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.category-layout a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.productTitle {
+  text-decoration: none !important;
+  color: black;
+}
+
+
 
 
 
@@ -106,6 +124,8 @@ h3{
   width: 50%;
   right: 0;
 }
+
+
 
 .text-description{
   /* font-family: 'Playfair Display', serif; */
@@ -153,5 +173,5 @@ h3{
 
 
 .qrcode{
-  width: 70%;
+  width: 60%;
 }

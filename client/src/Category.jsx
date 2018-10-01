@@ -7,7 +7,6 @@ class Category extends Component {
   constructor(props){
     super(props);
     this.state = { images: [] }
-    console.log("category sttate: ", this.state)
   }
 
   getImagesByCat(category){
@@ -15,12 +14,13 @@ class Category extends Component {
     fetch(url)
     .then(res => res.json())
     .then(images => { this.setState({ images })})
+    console.log("category sttate: ", this.state.images)
   }
 
   generateList(){
     const images = this.state.images;
     const list = images.map((image)=>
-    <NavLink to={"/products/" + image.product_id}> <GridProduct key={image.id} image={image.path_1} /> </NavLink>);
+    <NavLink to={"/products/" + image.product_id}> <GridProduct key={image.id} image={image.path_1} name={image.name} /> </NavLink>);
     return list;
   }
 
@@ -46,6 +46,7 @@ render(){
           <ul>{this.generateList()}</ul>
         </div>
       </div>
+
     );
   }
 }

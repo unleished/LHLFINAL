@@ -19,7 +19,7 @@ if(!props.user.email){
     return (
       <div className="nav-bar d-flex-row align-items-center">
         <nav id="nav-bar" className="d-flex row align-items-center">
-          <img className="logo" alt="" src="/images/tryitlogo.png"/>
+          <a href="/"><img className="logo" alt="" src="/images/tryitlogo.png"/></a>
             <ul className="m-0">
               <li className="nav-item active">
                <NavLink to="/"> Home </NavLink>

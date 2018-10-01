@@ -33,6 +33,10 @@
 }
 
 .nav-bar .logo{
-  width: 15%;
+  width: 140%;
   float:left;
+}
+
+.nav-bar a {
+  width: 100px;
 }
