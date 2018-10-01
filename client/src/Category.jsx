@@ -45,7 +45,6 @@ render(){
       filter: "grayscale(100%)",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover"
-
   }
 
 

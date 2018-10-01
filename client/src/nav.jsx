@@ -47,8 +47,8 @@ let text = '';
               <li className="nav-item">
                <NavLink to="/about"> About Us </NavLink>
               </li>
-              <li className="nav-item">
-                Welcome, {user}
+              <li className="nav-item right">
+                 Welcome, {user}
               </li>
               <li className="nav-item ">
                 <NavLink to={link}> {text} </NavLink>
