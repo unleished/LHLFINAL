@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./login.css";
+
 
 
 class Login extends Component{
@@ -9,11 +9,6 @@ class Login extends Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // handleChange(e){
-  //         this.setState({
-  //           [e.target.name]: e.target.value
-  //             })
-  // }
 
  handleSubmit(e){
     e.preventDefault();
