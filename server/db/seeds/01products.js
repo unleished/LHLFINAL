@@ -11,7 +11,7 @@ exports.seed = function(knex, Promise) {
          category: 'chairs',
          description: "Charles and Ray Eames realized their first successful, single-shell form in 1950 with the Molded Fiberglass Chairs. However, when the environmental risks associated with fiberglass production became more widely understood, the decision was made to discontinue fiberglass shell production until a more suitable material could be found. In 2001, Herman Miller reintroduced the Molded Plastic Chair in polypropylene. In addition to being 100 percent recyclable, the polypropylene shell chair's subtle matte texture offers a soft tactility as well as notable durability.",
          price: '350',
-         qrcode: 'http://api.qrserver.com/v1/create-qr-code/?data=product_1&size=100x100'
+         qrcode: 'http://api.qrserver.com/v1/create-qr-code/?data=https://hannahjn.github.io/argon-chair/&size=100x100'
        },
         { name: 'The Vegetal Chair',
         category: 'chairs',
