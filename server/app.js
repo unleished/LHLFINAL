@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/api/v1/products');
 var imagesRouter = require('./routes/api/v1/images');
 var usersRouter = require('./routes/api/v1/users');
-const bcrypt = require('bcrypt');
+
 
 
 const knexConfig = require('./knexfile');
@@ -41,9 +41,10 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/images', imagesRouter);
-app.use('/api/v1/usersRouter', usersRouter);
 
-// app.use('/api/v1/users', usersRouter);
+
+app.use('/api/v1/users', usersRouter);
+
 
 
 // error handler
@@ -78,31 +79,6 @@ app.post("/register", (req, res) => {
 
 });
 
-// app.use("/login", (req, res) => {
-//   console.log(token, 'jimmy')
-//   // get user object from the data source, Ex: database
-// knex
-//     .select("*")
-//     .from("users")
-//     .where({email: req.params.email}).first() // to avoid getting back an array since just one user.
-//     .then(row => {
-//       bcrypt.compare(req.params.password, row.password, function(err, res) {
-
-//           if(res){
-//             res.json({email: row.email});
-//             const token = jsonWebToken.sign(user, myJWTSecretKey);
-//             res.json({
-//               token: token
-//             });
-
-//           }else{
-//             console.error("error: ", err);
-//           }
-//       });
-//     })
-//     .catch(error => {
-//       console.error("error: ", error);
-//     });
   //extract the data from the form with body parser
 
   // retrieve the user in the database and authenticate

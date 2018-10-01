@@ -18,13 +18,12 @@ class Login extends Component{
  handleSubmit(e){
     e.preventDefault();
     const that = this;
-    debugger
     let reqBody = {
       email: this.refs.email.value,
       password: this.refs.password.value,
     };
 
-    fetch("/api/v1/usersRouter/login", {
+    fetch("/api/v1/users/login", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
             "Content-Type": "application/json; charset=utf-8",
