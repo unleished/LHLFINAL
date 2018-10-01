@@ -15,8 +15,8 @@ var usersRouter = require('./routes/api/v1/users');
 
 const knexConfig = require('./knexfile');
 const knex = require("knex")(knexConfig["development"]); require("dotenv").config();
-const jsonWebToken = require("jsonwebtoken");
-const myJWTSecretKey = 'my-secret-key';
+
+
 var app = express();
 
 
@@ -59,33 +59,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.post("/register", (req, res) => {
-  const user = {
-    email: req.params.email,
-    password:req.params.password
-  };
 
-  bcrypt.hash(req.params.password, 10, function(err, hash) {
-    user.password = hash;
-    knex('users').insert(user)
-    const newUser = {email: user.email};
-    const token = jsonWebToken.sign(newUser, myJWTSecretKey);
-    res.json({
-      token: token
-    });
-  });
-  // extract user info from the form -> create the user object
-  // save it to database (bcrypt for password)
 
-});
-
-  //extract the data from the form with body parser
-
-  // retrieve the user in the database and authenticate
-
-  // get the user back
-
-  // sign with default (HMAC SHA256)
 
 // app.get("/verify/:token", (req, res) => {
 //   try {
@@ -106,7 +81,7 @@ app.post("/register", (req, res) => {
 // });
 
 
-// catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
   next(createError(404));
 });

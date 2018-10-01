@@ -17,24 +17,23 @@ class Login extends Component{
 
  handleSubmit(e){
     e.preventDefault();
-    const that = this;
+
     let reqBody = {
       email: this.refs.email.value,
       password: this.refs.password.value,
     };
 
     fetch("/api/v1/users/login", {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        method: "POST",
         headers: {
             "Content-Type": "application/json; charset=utf-8",
-            // "Content-Type": "application/x-www-form-urlencoded",
         },
         body: JSON.stringify(reqBody), // body data type must match "Content-Type" header
     })
       .then((res) => {
         if (res.status === 200) {
             window.sessionStorage.accessToken = res.token;
-            that.props.setCurrentUser({id: res.id, email: reqBody.email});
+            this.props.setCurrentUser({id: res.id, email: reqBody.email});
         }
         else {
             alert("Invalid Email or Password");
@@ -44,17 +43,20 @@ class Login extends Component{
 
 render(){
     return (
-      <form onSubmit={this.handleSubmit} id="login">
-            <div class="form-group">
+
+      <form onSubmit={this.handleSubmit} id="login" className="justify-content-center">
+            <div className="d-inline-flex flex-column justify-content-center">
+              <div className="p-2">
               <label >Email:</label>
               <input ref="email" className="form-control" placeholder="Email Address" type="email" required="true"/>
-            </div>
-            <div className="form-group">
-              <label>Password:</label>
-              <input ref="password" className="form-control" placeholder="Password" type="password" required="true"/>
-            </div>
-            <div>
-              <input type="submit" value="Login"/>
+              </div>
+              <div className="p-2">
+                <label>Password:</label>
+                <input ref="password" className="form-control" placeholder="Password" type="password" required="true"/>
+              </div>
+              <div className="p-2">
+                <input type="submit" value="Login"/>
+              </div>
             </div>
           </form>
     );
