@@ -26,30 +26,47 @@ class App extends Component {
 
 constructor(){
     super();
-    this.state = { user: 'test' }
+    this.state = { user: '', loggedIn: false }
     this.setCurrentUser = this.setCurrentUser.bind(this)
+    this.handleLogout = this.handleLogout.bind(this);
 }
+
+handleLogout(){
+    sessionStorage.clear();
+    this.setState({user: '', loggedIn: false});
+    window.location.replace('/');
+    console.log(this.state.user);
+  }
 
 setCurrentUser(user){
   this.setState({user: user})
 }
 
+componentWillMount(){
+      if(sessionStorage.getItem('token') != null){
+          this.setState({loggedIn: true});
+      }
+      else{
+          this.setState({loggedIn: false});
+      }
+  }
+
   render() {
     return (
     <div className="container-fluid">
-      <BrowserRouter>
-
+     <BrowserRouter>
       <div>
-      <Nav user={this.state.user}/>
+       <Nav user={this.state.user} loggedIn={this.state.loggedIn}/>
         <Switch>
           <Route exact path="/" component={() => <Home />}/>
           <Route path="/categories/:category" component ={(props) => <Category {...props} />}/>
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
           <Route path="/login" component={(props) => <Login {...props} setCurrentUser={this.setCurrentUser} />}/>
+          <Route path='/logout' render={this.handleLogout} />
         </Switch>
-      </div>
+       </div>
       </BrowserRouter>
-      <Footer />
+     <Footer />
     </div>
 
     );

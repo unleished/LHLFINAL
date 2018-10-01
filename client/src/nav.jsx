@@ -6,15 +6,23 @@ import {
 
 
 
+
 function Nav (props){
 
 let user = '';
-if(!props.user.email){
-    user = 'Guest';
-}else{
-    user = props.user.email;
+let link = '';
+let text = '';
+  if(!props.user.email){
+      user = 'Guest';
+      link = '/login';
+      text = 'Login';
+  }else{
+      user = props.user.email;
+      link = '/logout';
+      text = 'Logout';
+  }
 
-}
+
 
     return (
       <div className="nav-bar d-flex-row align-items-center">
@@ -40,7 +48,7 @@ if(!props.user.email){
                <NavLink to="/about"> About Us </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="#"> Welcome, {user} </NavLink>
+                Welcome, {user} <NavLink to={link}> {text} </NavLink>
               </li>
             </ul>
       </nav>
