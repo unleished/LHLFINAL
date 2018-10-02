@@ -30,6 +30,8 @@ let regtext = '';
 
 
     return (
+
+
       <div className="nav-bar d-flex-row align-items-center">
         <nav id="nav-bar" className="d-flex row align-items-center">
           <a href="/"><img className="logo" alt="" src="/images/tryitlogo.png"/></a>
@@ -63,7 +65,8 @@ let regtext = '';
               </li>
             </ul>
       </nav>
-    </div>
+</div>
+
 
     );
 }

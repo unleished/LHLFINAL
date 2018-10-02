@@ -1,7 +1,7 @@
 .nav-bar{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   /* flex: 1; */
   width: 100%;
   top: 0;
@@ -11,6 +11,7 @@
   z-index: 100;
   padding: 2em;
 }
+
 
 .nav-bar li{
   font-size: 16px;
