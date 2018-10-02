@@ -34,7 +34,8 @@ class Register extends Component{
     })
       .then((res) => {
         if (res.ok){
-          redirect: window.location.replace("./home.html")
+          this.props.setCurrentUser({id: res.id, email: reqBody.email});
+          redirect: window.location.replace("./login")
           return res.json();
         } else {
           throw new Error ('Something went wrong with your fetch');
@@ -45,23 +46,27 @@ class Register extends Component{
 
 render(){
     return (
-           <form onSubmit={this.handleSubmit} className="signup-form">
-            <div>
+        <div id="wrapper">
+           <form onSubmit={this.handleSubmit} id="login">
+            <div className="d-inline-flex flex-column justify-content-center">
+            <div className="p-2">
               <label >Email:</label>
-              <input ref="email" type="text" required="true"/>
+              <input ref="email" className="form-control" placeholder="Email Address" type="email"  required="true"/>
             </div>
-            <div>
+            <div className="p-2">
               <label>Password:</label>
               <input ref="password" type="password" required="true"/>
             </div>
-            <div>
+            <div className="p-2">
               <label>Confirm:</label>
-              <input ref="confirmPassword" type="password" required="true"/>
+              <input ref="confirmPassword" className="form-control" placeholder="Password" type="password"required="true"/>
             </div>
-            <div>
+            <div className="p-2">
               <input type="submit" value="Register"/>
             </div>
+            </div>
           </form>
+        </div>
     );
   }
 }
