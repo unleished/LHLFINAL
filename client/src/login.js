@@ -29,6 +29,8 @@ class Login extends Component{
         if (res.status === 200) {
             window.sessionStorage.accessToken = res.token;
             this.props.setCurrentUser({id: res.id, email: reqBody.email});
+            render: window.location.replace("./")
+
         }
         else {
             alert("Invalid Email or Password");
