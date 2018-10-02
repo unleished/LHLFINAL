@@ -2,7 +2,7 @@
 
 An web catalogue featuring an AR component ( https://github.com/hannahjn/argon-chair ) to try items in the 'real' world.
 
-# Prerequesites
+# Prerequisites
 Client Side:  
     "bootstrap": "^4.1.3",  
     "jquery": "^3.3.1",  
