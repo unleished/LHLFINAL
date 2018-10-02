@@ -64,7 +64,8 @@ componentWillMount(){
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
           <Route path="/login" component={(props) => <Login {...props} setCurrentUser={this.setCurrentUser} />}/>
           <Route path='/logout' render={this.handleLogout} />
-          <Route path='/register' component={() => <Register />}/>
+          <Route path='/register' component={(props) => <Register {...props} setCurrentUser={this.setCurrentUser} />}/>
+
         </Switch>
        </div>
       </BrowserRouter>
