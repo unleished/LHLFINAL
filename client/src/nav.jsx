@@ -12,10 +12,15 @@ function Nav (props){
 let user = '';
 let link = '';
 let text = '';
+let reglink = '';
+let regtext = '';
   if(!props.user.email){
       user = 'Guest';
       link = '/login';
       text = 'Login';
+      reglink = '/register';
+      regtext = "Register";
+
   }else{
       user = props.user.email;
       link = '/logout';
@@ -48,13 +53,13 @@ let text = '';
                <NavLink to="/about"> About Us </NavLink>
               </li>
               <li className="nav-item right">
-                Welcome, {user}! 
+                Welcome, {user}!
               </li>
               <li className="nav-item right">
                  <NavLink to={link}> {text} </NavLink>
               </li>
               <li className="nav-item ">
-                <NavLink to="/register"> Register </NavLink>
+                <NavLink to={reglink}> {regtext} </NavLink>
               </li>
             </ul>
       </nav>
