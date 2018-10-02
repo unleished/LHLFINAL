@@ -42,7 +42,7 @@ render(){
       <form onSubmit={this.handleSubmit} id="login" className="justify-content-center">
             <div className="d-inline-flex flex-column justify-content-center">
               <div className="p-2">
-              <label >Email:</label>
+              <label>Email:</label>
               <input ref="email" className="form-control" placeholder="Email Address" type="email" required="true"/>
               </div>
               <div className="p-2">
