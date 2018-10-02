@@ -50,8 +50,11 @@ let text = '';
               <li className="nav-item right">
                  Welcome, {user}
               </li>
+              <li className="nav-item right">
+                 <NavLink to={link}> {text} </NavLink>
+              </li>
               <li className="nav-item ">
-                <NavLink to={link}> {text} </NavLink>
+                <NavLink to="/register"> Register </NavLink>
               </li>
             </ul>
       </nav>
