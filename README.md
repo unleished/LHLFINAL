@@ -28,16 +28,16 @@ Server Side:
     "morgan": "~1.9.0",  
     "nodemon": "^1.18.4",  
     "pg": "^7.4.3",  
-    "startbootstrap-thumbnail-gallery": "^4.1.1" . 
+    "startbootstrap-thumbnail-gallery": "^4.1.1"  
   
   # Installation
   
   Run `yarn install`
   
   # Authors
-  Linh Le Kim . 
-  Leisha Magsisi . 
-  Hannah Norish . 
+  Linh Le Kim  
+  Leisha Magsisi  
+  Hannah Norish  
   
   
   
