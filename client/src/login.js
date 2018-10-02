@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-
+import "./login.css";
 
 class Login extends Component{
 
@@ -38,7 +38,7 @@ class Login extends Component{
 
 render(){
     return (
-
+      <div id="wrapper">
       <form onSubmit={this.handleSubmit} id="login" className="justify-content-center">
             <div className="d-inline-flex flex-column justify-content-center">
               <div className="p-2">
@@ -54,6 +54,7 @@ render(){
               </div>
             </div>
           </form>
+        </div>
     );
   }
 }

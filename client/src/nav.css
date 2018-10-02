@@ -12,13 +12,6 @@
   padding: 2em;
 }
 
-/* .nav-bar-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-} */
-
 .nav-bar li{
   font-family: 'Playfair Display', serif;
   font-size: 16px;
@@ -28,6 +21,8 @@
 }
 
 .nav-bar li a:link, a:visited{
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
   text-decoration: none;
   color: black;
 }
