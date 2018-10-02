@@ -65,17 +65,17 @@ class ProductContainer extends Component {
         </div>
         <div className="product-description col-md-6 pb-5">
             <h1>{this.state.product.name}</h1>
-            <p className="text-description py-3">{this.state.product.description}</p>
+            <p className="text-description py-5 pr-3 mr-5">{this.state.product.description}</p>
           <div className="row">
             <div className="col">
               <h1 className="pb-3">${this.state.product.price}.00</h1>
             </div>
             <div className="col">
-              <h3 className="pb-3">Try it at Home</h3>
+              <h1 className="pb-3">Try it at Home</h1>
               <img className="qrcode" alt="" src={this.state.product.qrcode}/>
             </div>
             <div className="col">
-              <h3 >Contact Supplier</h3>
+              <h1 >Contact Supplier</h1>
               <p className="contactIcons"><i class="fas fa-envelope pr-2"></i><i class="fas fa-phone"></i></p>
             </div>
 
