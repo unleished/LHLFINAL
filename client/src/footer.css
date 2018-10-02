@@ -6,7 +6,7 @@
   width: 100%;
   bottom: 0;
   height: 250px;
-  background-color: #ffd1dc;
+  background-color: #e0e0e0;
   color: black;
   border-radius: .3rem;
 
@@ -14,6 +14,11 @@
 
 .footerwrapper {
   width: 70%;
+}
+
+.footerIcons {
+  font-size: 3em;
+  color: black;
 }
 
 .footText {

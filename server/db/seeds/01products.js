@@ -126,9 +126,9 @@ exports.seed = function(knex, Promise) {
           path_4: '/images/chairs/1_vegetal/4.png'
         },
         { product_id: product_id[2],
-          path_1: '/images/chairs/2_fishnet/2.png',
-          path_2: '/images/chairs/2_fishnet/3.png',
-          path_3: '/images/chairs/2_fishnet/1.png',
+          path_1: '/images/chairs/2_fishnet/1.png',
+          path_2: '/images/chairs/2_fishnet/2.png',
+          path_3: '/images/chairs/2_fishnet/3.png',
           path_4: '/images/chairs/2_fishnet/4.png'
         },
         { product_id: product_id[3],
