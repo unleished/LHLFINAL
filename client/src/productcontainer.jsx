@@ -70,6 +70,7 @@ class ProductContainer extends Component {
             <div className="col">
               <h1>Try it at Home</h1>
               <p>Use vyo͞o AR to test furniture in your home.</p>
+              <p>Contact Supplier</p>
             </div>
             <div className="col">
               <img className="qrcode" alt="" src={this.state.product.qrcode}/>
