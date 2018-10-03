@@ -1,7 +1,8 @@
 var express = require("express");
 var router = express.Router();
 const knexConfig = require("../../../knexfile.js");
-const knex = require("knex")(knexConfig["development"]);
+const environment = process.env.NODE_ENV || 'development';
+const knex = require("knex")(knexConfig[environment]);
 const bcrypt = require('bcryptjs');
 const jsonWebToken = require("jsonwebtoken");
 const myJWTSecretKey = 'my-secret-key';

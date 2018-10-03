@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
 const knexConfig = require("../../../knexfile.js");
-const knex = require("knex")(knexConfig["development"]);
-
+const environment = process.env.NODE_ENV || 'development';
+const knex = require("knex")(knexConfig[environment]);
 
 router.get("/", function(req, res, next) {
   knex.from('products').innerJoin('images', 'products.id', 'images.product_id')

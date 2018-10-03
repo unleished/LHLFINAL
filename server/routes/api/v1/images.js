@@ -3,7 +3,8 @@
 var express = require("express");
 var router = express.Router();
 const knexConfig = require("../../../knexfile.js");
-const knex = require("knex")(knexConfig["development"]);
+const environment = process.env.NODE_ENV || 'development';
+const knex = require("knex")(knexConfig[environment]);
 
 /* GET users listing. */
 router.get("/", function(req, res, next) {
