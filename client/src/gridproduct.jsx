@@ -13,6 +13,7 @@ const imageURL = props.image
           <img id="gallery" className="img-fluid img-thumbnail" src={"" + imageURL} alt="" />
         </a>
         <h2 className="productTitle">{props.name}</h2>
+        <h4>${props.price}.00</h4>
 
       </div>
     );

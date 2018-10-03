@@ -20,7 +20,7 @@ class Category extends Component {
   generateList(){
     const images = this.state.images;
     const list = images.map((image)=>
-    <NavLink to={"/products/" + image.product_id}> <GridProduct key={image.id} image={image.path_1} name={image.name} /> </NavLink>);
+    <NavLink to={"/products/" + image.product_id}> <GridProduct key={image.id} image={image.path_1} name={image.name} price={image.price}/> </NavLink>);
     return list;
   }
 
@@ -47,13 +47,12 @@ render(){
       backgroundSize: "cover"
   }
 
-
     return (
       <div className="categoryPage">
         <div className="categoryHeader d-flex justify-content-center align-items-center text-white" style={styles}>
           <h1>{this.capitalizeCatName(this.props.match.params.category)}</h1>
         </div>
-        <div className="category-layout my-3">
+        <div className="category-layout mr-5">
           <ul>{this.generateList()}</ul>
         </div>
       </div>

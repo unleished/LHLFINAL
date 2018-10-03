@@ -7,7 +7,7 @@ function Footer (props) {
     return (
       <div className="vyoofooter">
 
-          <div className="footerwrapper">
+          <div className="footerwrapper row d-flex justify-content-center">
             <div className="footText col-4">
               <p>1234 Notre Dame Ouest</p>
               <p>Montreal, QC H3C 0G4</p>
@@ -24,9 +24,9 @@ function Footer (props) {
               <p>Contact Us</p>
             </div>
 
-            <div class="footer-copyright text-center">
+            <div class="footer-copyright text-center pt-2">
               <div className="footerIcons">
-               <i class="fab fa-instagram px-2"></i><i class="fab fa-facebook px-2"></i><i class="fab fa-twitter-square px-2"></i>
+                <i class="fab fa-instagram px-2"></i><i class="fab fa-facebook px-2"></i><i class="fab fa-twitter-square px-2"></i>
               </div>
               © 2018 Copyright: vyo͞o
             </div>

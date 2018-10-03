@@ -5,7 +5,7 @@
   justify-content: space-around;
   width: 100%;
   bottom: 0;
-  height: 250px;
+  height: 200px;
   background-color: #e0e0e0;
   color: black;
   border-radius: .3rem;
@@ -13,7 +13,7 @@
 }
 
 .footerwrapper {
-  width: 70%;
+  width: 80%;
 }
 
 .footerIcons {
@@ -22,13 +22,12 @@
 }
 
 .footText {
-  /* padding: 10px 30px 10px 30px; */
-  /* display: inline-block; */
-  float: left;
-  width: 33.33%;
-  text-align: left;
-
+  /* width: 33.33%; */
 }
-.footText p{
+.footText p {
   /* margin: 5px; */
+  font-size: 14px;
+  letter-spacing: normal;
+  text-align: center;
+  margin: 0px;
 }

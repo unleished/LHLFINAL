@@ -23,7 +23,7 @@ render(){
           </div>
           <div className="hpright pt-3 px-3 pt-md-5 px-md-5">
             <div className="hpBannerName">
-              <a href="/categories/Lighting"><h1>Lighting</h1></a>
+              <a href="/categories/lighting"><h1>Lighting</h1></a>
             </div>
           </div>
         </div>

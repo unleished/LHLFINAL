@@ -66,17 +66,19 @@ class ProductContainer extends Component {
         <div className="product-description col-md-6 pb-5">
             <h1>{this.state.product.name}</h1>
             <p className="text-description py-5 pr-3 mr-5">{this.state.product.description}</p>
-          <div className="row">
-            <div className="col">
-              <h1 className="pb-3">${this.state.product.price}.00</h1>
+          <div className="row text-center">
+            <div className="col-3 text-left">
+              <h2 className="pb-3">${this.state.product.price}.00</h2>
             </div>
-            <div className="col">
-              <h1 className="pb-3">Try it at Home</h1>
+            <div className="col-4">
+              <h2 className="pb-3">Try it at Home</h2>
               <img className="qrcode" alt="" src={this.state.product.qrcode}/>
             </div>
-            <div className="col">
-              <h1 >Contact Supplier</h1>
-              <p className="contactIcons"><i class="fas fa-envelope pr-2"></i><i class="fas fa-phone"></i></p>
+            <div className="col-4">
+              <h2 >Contact Supplier</h2>
+              <p className="contactIcons d-flex justify-content-around">
+                <a href="http://store.hermanmiller.com/dining/dining-chairs/eames-molded-plastic-wire-base-side-chair-dsr/1153.html?lang=en_US&"><i class="fas fa-envelope pr-2"></i></a>
+                <a href="tel:514-555-1234"><i class="fas fa-phone"></i></a></p>
             </div>
 
 
