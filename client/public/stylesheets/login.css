@@ -1,0 +1,19 @@
+#login{
+  max-width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+
+}
+#wrapper{
+ text-align: left;
+ border-radius: 30px;
+ background-color: #d3d3d3;
+ width: 30%;
+ margin: 10px auto;
+ padding: 20px 0 20px 0;
+}
+
+label {
+
+}

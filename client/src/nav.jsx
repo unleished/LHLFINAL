@@ -14,7 +14,8 @@ let link = '';
 let text = '';
 let reglink = '';
 let regtext = '';
-  if(!props.user.email){
+let userExists = localStorage.getItem('user')
+  if(!userExists){
       user = 'Guest';
       link = '/login';
       text = 'Login';
@@ -22,7 +23,7 @@ let regtext = '';
       regtext = "Register";
 
   }else{
-      user = props.user.email;
+      user = userExists;
       link = '/logout';
       text = 'Logout';
   }

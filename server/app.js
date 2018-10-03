@@ -16,7 +16,7 @@ var usersRouter = require('./routes/api/v1/users');
 const knexConfig = require('./knexfile');
 require("dotenv").config();
 const environment = process.env.NODE_ENV || 'development';
-const knex = require("knex")(knexConfig[environment]); 
+const knex = require("knex")(knexConfig[environment]);
 
 var app = express();
 
@@ -62,28 +62,24 @@ app.use(function(err, req, res, next) {
 });
 
 
+app.get("/verify/:token", (req, res) => {
+  try {
+    const tokenDecodedData = jsonWebToken.verify(
+      req.params.token,
+      myJWTSecretKey
+      );
+    return res.json({
+      error: false,
+      data: tokenDecodedData
+    });
+  } catch (error) {
+    res.json({
+      error: true,
+      data: error
+    });
+  }
+});
 
-
-
-
-
-// app.get("/verify/:token", (req, res) => {
-//   try {
-//     const tokenDecodedData = jsonWebToken.verify(
-//       req.params.token,
-//       myJWTSecretKey
-//       );
-//     return res.json({
-//       error: false,
-//       data: tokenDecodedData
-//     });
-//   } catch (error) {
-//     res.json({
-//       error: true,
-//       data: error
-//     });
-//   }
-// });
 
 
 

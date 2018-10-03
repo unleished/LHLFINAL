@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import { NavLink } from "react-router-dom";
-import GridProduct from "./gridproduct";
-import Category from "./Category";
-import Nav from "./nav";
+
+
 
 class Home extends Component {
 render(){

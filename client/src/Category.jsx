@@ -14,7 +14,7 @@ class Category extends Component {
     fetch(url)
     .then(res => res.json())
     .then(images => { this.setState({ images })})
-    console.log("category sttate: ", this.state.images)
+
   }
 
   generateList(){

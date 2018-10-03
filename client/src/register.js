@@ -10,9 +10,7 @@ class Register extends Component{
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = { user: [], token: '' }
   }
-  verifyToken(){
 
-  }
   handleChange(e){
           this.setState({
             [e.target.name]: e.target.value
@@ -34,8 +32,7 @@ class Register extends Component{
     })
       .then((res) => {
         if (res.ok){
-          this.props.setCurrentUser({id: res.id, email: reqBody.email});
-          redirect: window.location.replace("./login")
+        window.location.replace("./login")
           return res.json();
         } else {
           throw new Error ('Something went wrong with your fetch');
@@ -63,6 +60,7 @@ render(){
             </div>
             <div className="p-2">
               <input type="submit" value="Register"/>
+
             </div>
             </div>
           </form>
