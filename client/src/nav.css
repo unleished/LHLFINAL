@@ -24,6 +24,7 @@
   font-size: 16px;
   text-decoration: none;
   color: black;
+  float: right;
 }
 
 .nav-bar .logo{
@@ -33,4 +34,8 @@
 
 .nav-bar a {
   width: 100px;
+}
+
+li.nav-item.right {
+  float: right;
 }

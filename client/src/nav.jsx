@@ -55,13 +55,13 @@ let regtext = '';
                <NavLink to="/about"> About Us </NavLink>
               </li>
               <li className="nav-item right">
-                Welcome, {user}!
-              </li>
-              <li className="nav-item right">
                  <NavLink to={link}> {text} </NavLink>
               </li>
-              <li className="nav-item ">
+              <li className="nav-item right">
                 <NavLink to={reglink}> {regtext} </NavLink>
+              </li>
+              <li className="nav-item right">
+                Welcome, {user}!
               </li>
             </ul>
       </nav>

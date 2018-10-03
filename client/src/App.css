@@ -164,6 +164,7 @@ h3{
   float:right;
   width: 50%;
   right: 0;
+  text-align: justify;
 }
 
 
@@ -190,6 +191,14 @@ h3{
 .fas {
   color: black;
   font-size: 30px;
+}
+
+.fas:hover {
+  color: #e0e0e0;
+}
+
+.fas:visited{
+  color: black;
 }
 
 .carousel-thumbnails .carousel-indicators img {
