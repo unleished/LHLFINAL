@@ -14,8 +14,9 @@ var usersRouter = require('./routes/api/v1/users');
 
 
 const knexConfig = require('./knexfile');
-const knex = require("knex")(knexConfig["development"]); require("dotenv").config();
-
+require("dotenv").config();
+const environment = process.env.NODE_ENV || 'development';
+const knex = require("knex")(knexConfig[environment]); 
 
 var app = express();
 
