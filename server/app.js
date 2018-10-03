@@ -41,9 +41,11 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/images', imagesRouter);
-
-
 app.use('/api/v1/users', usersRouter);
+
+app.use("*", function(req, resp) {
+  resp.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 
 
@@ -57,6 +59,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 
 
