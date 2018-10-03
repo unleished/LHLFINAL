@@ -24,15 +24,10 @@ function Footer (props) {
               <p>Contact Us</p>
             </div>
 
-<<<<<<< HEAD
-            <div class="footer-copyright text-center pt-2">
-              <div className="footerIcons">
-                <i class="fab fa-instagram px-2"></i><i class="fab fa-facebook px-2"></i><i class="fab fa-twitter-square px-2"></i>
-=======
+
             <div className="footer-copyright text-center">
               <div className="footerIcons">
                <i className="fab fa-instagram px-2"></i><i className="fab fa-facebook px-2"></i><i className="fab fa-twitter-square px-2"></i>
->>>>>>> bugs/loginbug
               </div>
               © 2018 Copyright: vyo͞o
             </div>

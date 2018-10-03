@@ -28,10 +28,7 @@ let userExists = localStorage.getItem('user')
       text = 'Logout';
   }
 
-
-
     return (
-
 
       <div className="nav-bar d-flex-row align-items-center">
         <nav id="nav-bar" className="d-flex row align-items-center">

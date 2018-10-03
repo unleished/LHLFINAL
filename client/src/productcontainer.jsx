@@ -77,7 +77,7 @@ class ProductContainer extends Component {
             <div className="col-4">
               <h2 >Contact Supplier</h2>
               <p className="contactIcons d-flex justify-content-around">
-              <a href="http://store.hermanmiller.com/dining/dining-chairs/eames-molded-plastic-wire-base-side-chair-dsr/1153.html?lang=en_US&"><i class="fas fa-globe"></i></a>
+              <a href="http://store.hermanmiller.com/dining/dining-chairs/eames-molded-plastic-wire-base-side-chair-dsr/1153.html?lang=en_US&" target="_blank"><i class="fas fa-globe"></i></a>
               <a href="mailto:info@hermanmiller.com"><i class="fas fa-envelope pr-2"></i></a>
                 <a href="tel:514-555-1234"><i class="fas fa-phone"></i></a></p>
             </div>
