@@ -33,14 +33,20 @@ router.post("/login", function(req, res, next) {
             res.json({
               token: token
             });
-            console.log(token);
+            console.log("back end", token);
           }else{
-            console.error("error inside: ", err);
+            res.status(404).json({
+                   error: true,
+                   message: 'Username or Password is Wrong'
+             });
           }
       })
     })
     .catch(error => {
-      console.error("error: ", error);
+      res.status(404).json({
+                   error: true,
+                   message: 'User does not exist'
+             });
     });
 });
 
@@ -49,11 +55,11 @@ router.post("/register", function(req, res, next) {
   const user = {
     email: req.body.email
   };
-console.log("user in server", user);
+
   bcrypt.hash(req.body.password, 10, function(err, hash) {
 
     user.password = hash;
-    console.log("user in server 2", user);
+    console.log("user in server", user);
     knex('users').insert(user)
     .then(() => {
       const token = jsonWebToken.sign(user, myJWTSecretKey);

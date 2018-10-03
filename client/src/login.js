@@ -23,12 +23,14 @@ class Login extends Component{
         headers: {
             "Content-Type": "application/json; charset=utf-8",
         },
-        body: JSON.stringify(reqBody), // body data type must match "Content-Type" header
+        body: JSON.stringify(reqBody),
     })
       .then((res) => {
         if (res.status === 200) {
-            window.sessionStorage.accessToken = res.token;
+            let temporary = res.json();
+            window.localStorage.setItem('access_token', res.token);
             this.props.setCurrentUser({id: res.id, email: reqBody.email});
+            window.location.replace("./")
         }
         else {
             alert("Invalid Email or Password");

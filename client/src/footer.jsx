@@ -24,9 +24,9 @@ function Footer (props) {
               <p>Contact Us</p>
             </div>
 
-            <div class="footer-copyright text-center">
+            <div className="footer-copyright text-center">
               <div className="footerIcons">
-               <i class="fab fa-instagram px-2"></i><i class="fab fa-facebook px-2"></i><i class="fab fa-twitter-square px-2"></i>
+               <i className="fab fa-instagram px-2"></i><i className="fab fa-facebook px-2"></i><i className="fab fa-twitter-square px-2"></i>
               </div>
               © 2018 Copyright: vyo͞o
             </div>

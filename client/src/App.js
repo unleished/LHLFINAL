@@ -27,13 +27,13 @@ class App extends Component {
 
 constructor(){
     super();
-    this.state = { user: '', loggedIn: false }
+    this.state = { user: ''}
     this.setCurrentUser = this.setCurrentUser.bind(this)
     this.handleLogout = this.handleLogout.bind(this);
 }
 
 handleLogout(){
-    sessionStorage.clear();
+    localStorage.clear();
     this.setState({user: '', loggedIn: false});
     window.location.replace('/');
     console.log(this.state.user);
@@ -41,11 +41,15 @@ handleLogout(){
 
 setCurrentUser(user){
   this.setState({user: user})
+  localStorage.setItem('user', user.email);
+  console.log("setCurrentUser", user)
 }
 
 componentWillMount(){
       if(sessionStorage.getItem('token') != null){
           this.setState({loggedIn: true});
+          console.log("componentWillMount sets state to", this.state.loggedIn);
+
       }
       else{
           this.setState({loggedIn: false});
@@ -64,7 +68,7 @@ componentWillMount(){
           <Route path="/products/:id" component ={(props) => <ProductContainer {...props} />}/>
           <Route path="/login" component={(props) => <Login {...props} setCurrentUser={this.setCurrentUser} />}/>
           <Route path='/logout' render={this.handleLogout} />
-          <Route path='/register' component={(props) => <Register {...props} setCurrentUser={this.setCurrentUser} />}/>
+          <Route path='/register' component={(props) => <Register {...props} />}/>
 
         </Switch>
        </div>

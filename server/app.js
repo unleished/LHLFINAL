@@ -60,25 +60,23 @@ app.use(function(err, req, res, next) {
 
 
 
-
-
-// app.get("/verify/:token", (req, res) => {
-//   try {
-//     const tokenDecodedData = jsonWebToken.verify(
-//       req.params.token,
-//       myJWTSecretKey
-//       );
-//     return res.json({
-//       error: false,
-//       data: tokenDecodedData
-//     });
-//   } catch (error) {
-//     res.json({
-//       error: true,
-//       data: error
-//     });
-//   }
-// });
+app.get("/verify/:token", (req, res) => {
+  try {
+    const tokenDecodedData = jsonWebToken.verify(
+      req.params.token,
+      myJWTSecretKey
+      );
+    return res.json({
+      error: false,
+      data: tokenDecodedData
+    });
+  } catch (error) {
+    res.json({
+      error: true,
+      data: error
+    });
+  }
+});
 
 
 
