@@ -1,6 +1,7 @@
 # vyo͞o
 
-An web catalogue featuring an AR component ( https://github.com/hannahjn/argon-chair ) to try items in the 'real' world.
+Online AR catalogue, enabling users to try furniture at home. Final project for Lighthouse Labs Montreal full stack bootcamp. 
+Featuring an AR component ( https://github.com/hannahjn/argon-chair ) to try items in the 'real' world.
 
 # Prerequisites
 Client Side:  
@@ -35,9 +36,9 @@ Server Side:
   Run `yarn install`
   
   # Authors
-  Linh Le Kim  
-  Leisha Magsisi  
-  Hannah Norish  
+  Linh Le Kim - https://github.com/lleki
+  Leisha Magsisi - https://github.com/unleished
+  Hannah Norish - https://github.com/hannahjn
   
   
   
